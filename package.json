@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Each pattern is a rule which describes what you have to do to generate the entity which it defines. It is a three-part rule, which expresses a relation between a certain context, a problem, and a solution.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nick Trombley <trombley.nick@gmail.com>",
   "dependencies": {
     "gatsby": "^2.15.7",
     "gatsby-image": "^2.2.17",
@@ -22,7 +22,12 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+	"gatsby",
+	"patterns",
+	"pattern language",
+	"architecture",
+	"urban planning",
+	"christopher alexander"
   ],
   "license": "MIT",
   "scripts": {
@@ -35,9 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Aias/pattern-languages"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Aias/pattern-languages/issues"
   }
 }
