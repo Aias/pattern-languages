@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from './image'
 
-const Hero = () => {
+const Hero: React.FunctionComponent = () => {
 	const { placeholderImage } = useStaticQuery(graphql`
 		query {
 			placeholderImage: file(

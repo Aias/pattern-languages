@@ -4,7 +4,7 @@ import 'normalize.css'
 
 import Header from './header'
 
-const Layout = ({ children }) => {
+const Layout: React.FunctionComponent = ({ children }) => {
 	const { site } = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
