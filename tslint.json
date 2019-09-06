@@ -1,0 +1,12 @@
+{
+	"rulesDirectory": ["tslint-plugin-prettier"],
+	"extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+	"rules": {
+		"prettier": true,
+		"jsx-no-multiline-js": false,
+		"jsx-no-lambda": false,
+		"import-name": false,
+		"no-boolean-literal-compare": false,
+		"ordered-imports": [false]
+	}
+}

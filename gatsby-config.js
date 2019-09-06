@@ -13,6 +13,8 @@ module.exports = {
 		author: `Nick Trombley`,
 	},
 	plugins: [
+		`gatsby-plugin-typescript`,
+		`gatsby-plugin-tslint`,
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-source-filesystem`,
