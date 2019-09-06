@@ -13,6 +13,8 @@ module.exports = {
 		author: `Nick Trombley`,
 	},
 	plugins: [
+		// For TypeScript stuff, see:
+		// https://medium.com/maxime-heckel/getting-started-with-typescript-on-gatsby-8544b47c1d27
 		`gatsby-plugin-typescript`,
 		`gatsby-plugin-tslint`,
 		`gatsby-plugin-react-helmet`,
