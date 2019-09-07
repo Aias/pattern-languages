@@ -15,8 +15,4 @@ const Header: React.FunctionComponent<HeaderProps> = ({ siteTitle }) => (
 	</header>
 )
 
-Header.defaultProps = {
-	siteTitle: ``,
-}
-
 export default Header

@@ -10,10 +10,10 @@ interface SEOProps {
 }
 
 const SEO: React.FunctionComponent<SEOProps> = ({
-	description,
-	lang,
-	meta,
 	title,
+	description = '',
+	lang = 'en',
+	meta = [],
 }) => {
 	const { site } = useStaticQuery(
 		graphql`
@@ -74,12 +74,6 @@ const SEO: React.FunctionComponent<SEOProps> = ({
 			].concat(meta)}
 		/>
 	)
-}
-
-SEO.defaultProps = {
-	description: '',
-	lang: 'en',
-	meta: [],
 }
 
 export default SEO
