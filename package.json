@@ -5,10 +5,10 @@
   "version": "0.1.0",
   "author": "Nick Trombley <trombley.nick@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.15.9",
+    "gatsby": "^2.15.11",
     "gatsby-image": "^2.2.17",
-    "gatsby-plugin-manifest": "^2.2.14",
-    "gatsby-plugin-offline": "^3.0.3",
+    "gatsby-plugin-manifest": "^2.2.15",
+    "gatsby-plugin-offline": "^3.0.4",
     "gatsby-plugin-react-helmet": "^3.1.6",
     "gatsby-plugin-sharp": "^2.2.20",
     "gatsby-plugin-tslint": "^0.0.2",
@@ -50,9 +50,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-	"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-	"type-check": "tsc --noEmit",
-	"lint": "tslint --project ."
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "type-check": "tsc --noEmit",
+    "lint": "tslint --project ."
   },
   "repository": {
     "type": "git",
