@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Nick Trombley <trombley.nick@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.15.11",
+    "gatsby": "^2.15.14",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-manifest": "^2.2.15",
     "gatsby-plugin-offline": "^3.0.4",
@@ -13,7 +13,7 @@
     "gatsby-plugin-sharp": "^2.2.20",
     "gatsby-plugin-tslint": "^0.0.2",
     "gatsby-plugin-typescript": "^2.1.6",
-    "gatsby-source-airtable": "^2.0.8",
+    "gatsby-source-airtable": "^2.0.9",
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-sharp": "^2.2.13",
     "normalize.css": "^8.0.1",
@@ -22,17 +22,17 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@types/node": "^12.7.4",
+    "@types/node": "^12.7.5",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
-    "@types/react-helmet": "^5.0.9",
+    "@types/react-helmet": "^5.0.10",
     "prettier": "^1.18.2",
     "tslint": "^5.19.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-loader": "^3.5.4",
     "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.3"
   },
   "keywords": [
     "gatsby",
