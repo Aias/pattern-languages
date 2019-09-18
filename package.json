@@ -5,14 +5,14 @@
   "version": "0.1.0",
   "author": "Nick Trombley <trombley.nick@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.15.14",
-    "gatsby-image": "^2.2.17",
+    "gatsby": "^2.15.16",
+    "gatsby-image": "^2.2.19",
     "gatsby-plugin-manifest": "^2.2.15",
-    "gatsby-plugin-offline": "^3.0.4",
+    "gatsby-plugin-offline": "^3.0.7",
     "gatsby-plugin-react-helmet": "^3.1.6",
-    "gatsby-plugin-sharp": "^2.2.20",
+    "gatsby-plugin-sharp": "^2.2.22",
     "gatsby-plugin-tslint": "^0.0.2",
-    "gatsby-plugin-typescript": "^2.1.6",
+    "gatsby-plugin-typescript": "^2.1.8",
     "gatsby-source-airtable": "^2.0.9",
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-sharp": "^2.2.13",
@@ -31,7 +31,7 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-loader": "^3.5.4",
     "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^4.0.0",
+    "tslint-react": "^4.1.0",
     "typescript": "^3.6.3"
   },
   "keywords": [
