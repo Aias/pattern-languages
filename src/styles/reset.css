@@ -10,8 +10,9 @@
 }
 
 html {
-	font-size: 100%;
 	height: 100%;
+	font-size: 100%;
+	line-height: 1.7;
 }
 
 /* Set core body defaults */
@@ -42,20 +43,19 @@ dd {
 	margin: 0;
 }
 
-/* Natural flow and rhythm in articles/sections by default */
-article > * + *,
-section > * + *,
-.flow > * + * {
-	margin-top: var(--flow);
-	/* margin-top: calc(1em * var(--line-height)); */
-}
-
-/* This is possibly the most absurd selector I've ever written. 
-   All this work just to get a *little* bit of extra space in the situation 
-   where you have something like article > section > h2. 
-   Please do not take this as reflective of my ability. I'm sorry. */
-article > section:not(:first-child) > *:first-child {
-	margin-top: var(--flow);
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+figure,
+figcaption,
+blockquote,
+dl {
+	margin-top: 1em;
 }
 
 /* Remove list styles and padding on ul, ol elements with a class attribute */

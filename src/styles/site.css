@@ -1,0 +1,30 @@
+:root {
+	--font-stack-system: system, -apple-system, '.SFNSText-Regular',
+		'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande',
+		sans-serif;
+	--font-stack-serif: 'Palatino Linotype', Palatino, Palladio,
+		'URW Palladio L', 'Book Antiqua', Baskerville, 'Bookman Old Style',
+		'Bitstream Charter', 'Nimbus Roman No9 L', Garamond, 'Apple Garamond',
+		'ITC Garamond Narrow', 'New Century Schoolbook', 'Century Schoolbook',
+		'Century Schoolbook L', Georgia, serif;
+	--font-stack-sans: var(--font-stack-system);
+	--font-stack-mono: Consolas, 'Andale Mono WT', 'Andale Mono',
+		'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
+		'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco,
+		'Courier New', Courier, monospace;
+}
+
+html {
+	background-color: #f5e9d8;
+	color: rgba(0, 0, 0, 0.9);
+}
+
+body {
+	font-family: var(--font-stack-serif);
+	padding: 2rem 4rem;
+}
+
+main {
+	max-width: 50rem;
+	margin: 0 auto;
+}
