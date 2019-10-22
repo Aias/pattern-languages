@@ -47,7 +47,10 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+	margin-top: 1.5em;
+}
+
 p,
 ul,
 ol,
@@ -56,6 +59,12 @@ figcaption,
 blockquote,
 dl {
 	margin-top: 1em;
+}
+
+li,
+dd {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 /* Remove list styles and padding on ul, ol elements with a class attribute */
