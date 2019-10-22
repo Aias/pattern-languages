@@ -11,13 +11,14 @@ module.exports = {
 		title: `patternsof.design`,
 		description: `Each pattern is a rule which describes what you have to do to generate the entity which it defines. It is a three-part rule, which expresses a relation between a certain context, a problem, and a solution.`,
 		author: `Nick Trombley`,
+		siteUrl: 'https://patternlanguages.netlify.com',
 	},
 	plugins: [
 		// For TypeScript stuff, see:
 		// https://medium.com/maxime-heckel/getting-started-with-typescript-on-gatsby-8544b47c1d27
 		`gatsby-plugin-typescript`,
 		`gatsby-plugin-tslint`,
-		`gatsby-plugin-react-helmet`,
+		`@rhysforyou/gatsby-plugin-react-helmet-async`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {

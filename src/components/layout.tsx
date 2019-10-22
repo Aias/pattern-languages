@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import 'normalize.css'
+import { ThemeProvider } from 'styled-components'
 
 import Header from './header'
 
@@ -16,17 +16,17 @@ const Layout: React.FunctionComponent = ({ children }) => {
 	`)
 
 	return (
-		<>
-			<Header siteTitle={site.siteMetadata.title} />
-			<div>
+		<ThemeProvider theme={{}}>
+			<>
+				<Header siteTitle={site.siteMetadata.title} />
 				<main>{children}</main>
 				<footer>
 					© {new Date().getFullYear()}, Built with
 					{` `}
 					<a href="https://www.gatsbyjs.org">Gatsby</a>
 				</footer>
-			</div>
-		</>
+			</>
+		</ThemeProvider>
 	)
 }
 
