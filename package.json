@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
+  "name": "pattern-languages",
+  "private": false,
   "description": "Each pattern is a rule which describes what you have to do to generate the entity which it defines. It is a three-part rule, which expresses a relation between a certain context, a problem, and a solution.",
   "version": "0.1.0",
   "author": "Nick Trombley <trombley.nick@gmail.com>",
@@ -17,7 +17,6 @@
     "gatsby-source-airtable": "^2.0.9",
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-transformer-sharp": "^2.3.0",
-    "normalize.css": "^8.0.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet-async": "^1.0.4",
