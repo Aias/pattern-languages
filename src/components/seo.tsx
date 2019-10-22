@@ -2,14 +2,14 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-interface SEOProps {
+interface ISEOProps {
 	title: string
 	description?: string
 	lang?: string
 	meta?: any[]
 }
 
-const SEO: React.FunctionComponent<SEOProps> = ({
+const SEO: React.FunctionComponent<ISEOProps> = ({
 	title,
 	description = '',
 	lang = 'en',

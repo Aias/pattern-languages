@@ -1,14 +1,17 @@
 import React, { FunctionComponent } from 'react'
-import Img from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 
-interface ImageProps {
-	fluid?: object
+interface IImageProps {
+	fluid?: FluidObject | FluidObject[]
 	[prop: string]: any
 }
 
 // https://spectrum.chat/gatsby-js/general/gatsby-images-and-fluid~df7a2d6f-2886-46fa-a663-a2059ce5ef71
 // https://www.gatsbyjs.org/packages/gatsby-image/#avoiding-stretched-images-using-the-fluid-type
-const NonStretchedImage: FunctionComponent<ImageProps> = ({ fluid, props }) => {
+const NonStretchedImage: FunctionComponent<IImageProps> = ({
+	fluid,
+	...otherProps
+}) => {
 	// let normalizedProps = props
 	// if (props.fluid && props.fluid.presentationWidth) {
 	// 	normalizedProps = {
@@ -22,7 +25,7 @@ const NonStretchedImage: FunctionComponent<ImageProps> = ({ fluid, props }) => {
 	// }
 
 	// return <Img {...normalizedProps} />
-	return <Img {...props} />
+	return <Img fluid={fluid} {...otherProps} />
 }
 
 export default NonStretchedImage

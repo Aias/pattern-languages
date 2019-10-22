@@ -1279,10 +1279,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.8.tgz#cb1bf6800238898bc2ff6ffa5702c3cadd350708"
   integrity sha512-FMdVn84tJJdV+xe+53sYiZS4R5yn1mAIxfj+DVoNiQjTYz1+OYmjwEZr1ev9nU0axXwda0QDbYl06QHanRVH3A==
 
-"@types/node@^12.11.1":
-  version "12.11.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.1.tgz#1fd7b821f798b7fa29f667a1be8f3442bb8922a3"
-  integrity sha512-TJtwsqZ39pqcljJpajeoofYRfeZ7/I/OMUQ5pR4q5wOKf2ocrUvBAZUMhWsOvKx3dVc/aaV5GluBivt0sWqA5A==
+"@types/node@^12.11.2":
+  version "12.11.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.2.tgz#75ba3beda30d690b89a5089ca1c6e8e386150b76"
+  integrity sha512-dsfE4BHJkLQW+reOS6b17xhZ/6FB1rB8eRRvO08nn5o+voxf3i74tuyFWNH6djdfgX7Sm5s6LD8t6mJug4dpDw==
 
 "@types/node@^7.0.11":
   version "7.10.7"
@@ -5534,10 +5534,10 @@ gatsby-telemetry@^1.1.33:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-transformer-sharp@^2.2.23:
-  version "2.2.23"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.23.tgz#225050f3bf23ea13a9da46667cc7980ce4090e65"
-  integrity sha512-Xd2Ydn6vrfpyElfRtiFqidHWhbXI28NS/sm9olOS1AJzSvonJ/UdQKQFhoGkgZ+JyWlo+yZfFmXMCSDr7pyVpQ==
+gatsby-transformer-sharp@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.3.0.tgz#15fed043a73a43d8b7e7512a6de72614ed28b11b"
+  integrity sha512-AW8Ds4CiJEcqKjCjbKfnrqRcwRAX2scybe5Lvv+9klSZcSTlDtsB4sSpKQbBOrLeMOmrRan4zoC0vPc1Ccut9g==
   dependencies:
     "@babel/runtime" "^7.6.3"
     bluebird "^3.7.0"
@@ -5547,10 +5547,10 @@ gatsby-transformer-sharp@^2.2.23:
     semver "^5.7.1"
     sharp "^0.23.1"
 
-gatsby@^2.16.5:
-  version "2.16.5"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.16.5.tgz#155376fd8d797ba111772d168daecd4a5ba036ef"
-  integrity sha512-ga7WX773yCouxVPTUgswkjnHkFMWsIuHyOfGzprqdI8EJ74oEkBfcDUZTntbXDuP20IUGomve6sUOJLwZMdReA==
+gatsby@^2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.17.0.tgz#f4a0dbe4d6897f32df3019d33ef4dee5d30b5aab"
+  integrity sha512-bi+Hv6nLj6u1eH/qNR8Df7yjSSNWje4GuP3IKS0l/dBH+a4WDZTuh8OR4oby9M06lwXfi8kfUlRStDzzjthfQA==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.6.4"
