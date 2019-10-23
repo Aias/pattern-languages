@@ -63,7 +63,7 @@ const IndexPage = () => {
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<h1>A Pattern Language</h1>
+			<SiteHeader>A Pattern Language</SiteHeader>
 			<p>
 				<em>
 					Which generates a human society and the structures to
@@ -102,6 +102,14 @@ const PatternEntry = ({ data }) => {
 		</li>
 	)
 }
+
+const SiteHeader = styled.h1`
+	margin-top: 2em;
+
+	@media (max-width: ${props => props.theme.media.sm}) {
+		margin-top: 1em;
+	}
+`
 
 const PatternList = styled.ol`
 	list-style: none;
