@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Link } from 'gatsby'
-
-import Hero from '../components/hero'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Button from '../components/button'
 
 const LanguagePage = () => {
 	const { allAirtable } = useStaticQuery(graphql`
@@ -66,20 +64,19 @@ const LanguagePage = () => {
 		allPatterns[p.slug] = p
 	})
 
-	console.log(patternsArr)
+	// console.log(patternsArr)
 
 	return (
 		<Layout>
 			<SEO title="Language" />
 			<div>
-				<button
-					type="button"
+				<Button
 					onClick={() => {
 						setLanguage({ patterns: [], reviewed: {} })
 					}}
 				>
 					Restart
-				</button>
+				</Button>
 			</div>
 			{language.patterns.length > 0 ? (
 				<Language language={language} allPatterns={allPatterns} />

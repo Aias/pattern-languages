@@ -15,9 +15,19 @@ const theme = {
 	},
 	clr: {
 		bg: '#f5e9d8',
-		textPrimary: 'rgba(0, 0, 0, 0.9)',
-		textSecondary: 'rgba(0, 0, 0, 0.6)',
+		textPrimary: 'rgba(0, 0, 0, 0.92)', // I could make
+		textSecondary: 'rgba(0, 0, 0, 0.61)', // these numbers
+		shadow: 'rgba(0,0,0,0.33)', // nice and even,
+		border: 'rgba(0,0,0,0.20)', // but where's the fun
+		faint: 'rgba(0,0,0,0.08)', // in that?
 	},
 }
 
+const color = c => props => props.theme.clr[c]
+const media = m => props => props.theme.media[m]
+const font = f => props => props.theme.font[f]
+const type = t => props => props.theme.type[t]
+
 export default theme
+
+export { color, media, font, type }

@@ -1,18 +1,20 @@
 import { createGlobalStyle } from 'styled-components'
 
+import { color, media, font, type } from './theme'
+
 const GlobalStyle = createGlobalStyle`
 	html {
-		line-height: ${props => props.theme.type.lineHeight};
-		background-color: ${props => props.theme.clr.bg};
-		color: ${props => props.theme.clr.textPrimary};
+		line-height: ${type('lineHeight')};
+		background-color: ${color('bg')};
+		color: ${color('textPrimary')};
 	}
 
 	body {
-		font-family: ${props => props.theme.font.serif};
+		font-family: ${font('serif')};
 		margin: 2rem 4rem;
 	}
 
-	@media (max-width: ${props => props.theme.media.sm}) {
+	@media (max-width: ${media('sm')}) {
 		body {
 			margin: 1rem 2rem;
 		}
@@ -20,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
 	a {
 		color: currentColor;
-		font-family: ${props => props.theme.font.mono};
+		font-family: ${font('mono')};
 		font-size: 0.9em;
 		transition: all 0.1s;
 		position: relative;
@@ -36,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
 			bottom: -6px;
 			left: -6px;
 			opacity: 0;
-			background-color: ${props => props.theme.clr.textPrimary};
+			background-color: ${color('textPrimary')};
 		}
 	}
 
