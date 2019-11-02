@@ -20,7 +20,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet-async": "^1.0.4",
-    "styled-components": "^4.4.1"
+    "styled-components": "^5.0.0-rc.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.5",
