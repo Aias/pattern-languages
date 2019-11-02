@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Button from '../components/button'
+import isEmpty from '../helpers/isEmpty'
 
 const LanguagePage = () => {
 	const { allAirtable } = useStaticQuery(graphql`
@@ -46,7 +47,7 @@ const LanguagePage = () => {
 	`)
 
 	const [language, setLanguage] = useState({
-		patterns: [],
+		patterns: {},
 		reviewed: {},
 	})
 
@@ -78,16 +79,14 @@ const LanguagePage = () => {
 					Restart
 				</Button>
 			</div>
-			{language.patterns.length > 0 ? (
-				<Language language={language} allPatterns={allPatterns} />
-			) : (
+			{isEmpty(language.patterns) ? (
 				<List
 					allPatterns={patternsArr}
 					handleClick={pattern => {
-						const newPatterns = [...language.patterns]
+						const newPatterns = { ...language.patterns }
 						const newReviewed = { ...language.reviewed }
 
-						newPatterns.push(pattern)
+						newPatterns[pattern.slug] = {}
 						newReviewed[pattern.slug] = {
 							selected: true,
 						}
@@ -98,6 +97,8 @@ const LanguagePage = () => {
 						})
 					}}
 				/>
+			) : (
+				<Language language={language} allPatterns={allPatterns} />
 			)}
 		</Layout>
 	)
@@ -125,9 +126,14 @@ const List = ({ allPatterns, handleClick }) => {
 
 const Language = ({ language, allPatterns }) => {
 	const { patterns, reviewed } = language
+	const list = Object.keys(patterns)
+		.map(p => allPatterns[p])
+		.sort((a, b) => {
+			return a.order - b.order
+		})
 	return (
 		<ListWrapper>
-			{patterns.map(({ pattern, order }) => {
+			{list.map(({ pattern, order }) => {
 				return (
 					<li key={order}>
 						#{order}. {pattern}
