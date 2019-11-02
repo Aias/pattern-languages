@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, FunctionComponent } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
@@ -124,7 +124,24 @@ const List = ({ allPatterns, handleClick }) => {
 	)
 }
 
-const Language = ({ language, allPatterns }) => {
+interface ILanguage {
+	patterns: object
+	reviewed: object
+}
+
+interface ILanguageProps {
+	language: ILanguage
+	allPatterns: object
+	handleAdd?: () => void
+	handleRemove?: () => void
+}
+
+const Language: FunctionComponent<ILanguageProps> = ({
+	language,
+	allPatterns,
+	handleAdd,
+	handleRemove,
+}) => {
 	const { patterns, reviewed } = language
 	const list = Object.keys(patterns)
 		.map(p => allPatterns[p])
