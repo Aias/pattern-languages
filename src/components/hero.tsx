@@ -1,14 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from './image'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
 const Hero: React.FunctionComponent = () => {
 	const { placeholderImage } = useStaticQuery(graphql`
 		query {
-			placeholderImage: file(
-				relativePath: { eq: "gatsby-astronaut.png" }
-			) {
+			placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
 				childImageSharp {
 					fluid(maxWidth: 300) {
 						...GatsbyImageSharpFluid

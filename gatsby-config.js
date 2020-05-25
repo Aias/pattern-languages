@@ -1,9 +1,9 @@
 require('dotenv').config({
-	path: `.env.${process.env.NODE_ENV}`,
+	path: `.env`
 })
 
 const bases = {
-	patterns: `appfoH6qlLxFCVhV5`,
+	patterns: `appfoH6qlLxFCVhV5`
 }
 
 module.exports = {
@@ -11,20 +11,20 @@ module.exports = {
 		title: `patternsof.design`,
 		description: `Each pattern is a rule which describes what you have to do to generate the entity which it defines. It is a three-part rule, which expresses a relation between a certain context, a problem, and a solution.`,
 		author: `Nick Trombley`,
-		siteUrl: 'https://patternlanguages.netlify.com',
+		siteUrl: 'https://patternlanguages.netlify.com'
 	},
 	plugins: [
 		// For TypeScript stuff, see:
 		// https://medium.com/maxime-heckel/getting-started-with-typescript-on-gatsby-8544b47c1d27
 		`gatsby-plugin-typescript`,
-		`gatsby-plugin-tslint`,
+		// `gatsby-plugin-tslint`,
 		`@rhysforyou/gatsby-plugin-react-helmet-async`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
-				path: `${__dirname}/src/images`,
-			},
+				path: `${__dirname}/src/images`
+			}
 		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
@@ -37,8 +37,8 @@ module.exports = {
 				background_color: `#663399`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-			},
+				icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+			}
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
@@ -49,47 +49,40 @@ module.exports = {
 		{
 			resolve: `gatsby-source-airtable`,
 			options: {
-				apiKey: process.env.AIRTABLE_API_KEY, // may instead specify via env, see below
+				apiKey: process.env.AIRTABLE_API_KEY,
 				tables: [
 					{
 						baseId: bases.patterns,
 						tableName: `languages`,
 						tableView: `Grid view`,
-						tableLinks: ['sections', 'patterns', 'orders'],
+						tableLinks: ['sections', 'patterns', 'orders']
 					},
 					{
 						baseId: bases.patterns,
 						tableName: `sections`,
 						tableView: `Grid view`,
-						tableLinks: ['language', 'patterns', 'category'],
+						tableLinks: ['language', 'patterns', 'category']
 					},
 					{
 						baseId: bases.patterns,
 						tableName: `patterns`,
 						tableView: `Grid view`,
-						tableLinks: [
-							'language',
-							'section',
-							'supports',
-							'refers_to',
-							'depends_on',
-							'orders',
-						],
+						tableLinks: ['language', 'section', 'supports', 'refers_to', 'depends_on', 'orders']
 					},
 					{
 						baseId: bases.patterns,
 						tableName: `orders`,
 						tableView: `Grid view`,
-						tableLinks: ['language', 'patterns'],
+						tableLinks: ['language', 'patterns']
 					},
 					{
 						baseId: bases.patterns,
 						tableName: `sequences`,
 						tableView: `Grid view`,
-						tableLinks: ['patterns'],
-					},
-				],
-			},
-		},
-	],
+						tableLinks: ['patterns']
+					}
+				]
+			}
+		}
+	]
 }

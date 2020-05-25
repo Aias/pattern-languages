@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 interface IHeaderProps {
 	siteTitle: string

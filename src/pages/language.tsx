@@ -7,17 +7,13 @@ import SEO from '../components/seo'
 import Button from '../components/button'
 import isEmpty from '../helpers/isEmpty'
 
-const LanguagePage = () => {
+const LanguagePage: React.FC = () => {
 	const { allAirtable } = useStaticQuery(graphql`
 		query {
 			allAirtable(
 				filter: {
 					table: { eq: "patterns" }
-					data: {
-						language: {
-							elemMatch: { data: { code: { eq: "BLD" } } }
-						}
-					}
+					data: { language: { elemMatch: { data: { code: { eq: "BLD" } } } } }
 				}
 			) {
 				edges {
@@ -48,20 +44,20 @@ const LanguagePage = () => {
 
 	const [language, setLanguage] = useState({
 		patterns: {},
-		reviewed: {},
+		reviewed: {}
 	})
 
 	const patternsArr = allAirtable.edges
 		.map(({ node }, i) => {
 			return {
 				...node.data,
-				order: allAirtable.edges.length - i,
+				order: allAirtable.edges.length - i
 			}
 		})
 		.sort((a, b) => a.order - b.order)
 
 	const allPatterns = {}
-	patternsArr.forEach(p => {
+	patternsArr.forEach((p) => {
 		allPatterns[p.slug] = p
 	})
 
@@ -69,7 +65,7 @@ const LanguagePage = () => {
 
 	return (
 		<Layout>
-			<SEO title="Language" />
+			<SEO title='Language' />
 			<div>
 				<Button
 					onClick={() => {
@@ -82,18 +78,18 @@ const LanguagePage = () => {
 			{isEmpty(language.patterns) ? (
 				<List
 					allPatterns={patternsArr}
-					handleClick={pattern => {
+					handleClick={(pattern) => {
 						const newPatterns = { ...language.patterns }
 						const newReviewed = { ...language.reviewed }
 
 						newPatterns[pattern.slug] = {}
 						newReviewed[pattern.slug] = {
-							selected: true,
+							selected: true
 						}
 
 						setLanguage({
 							patterns: newPatterns,
-							reviewed: newReviewed,
+							reviewed: newReviewed
 						})
 					}}
 				/>
@@ -107,7 +103,7 @@ const LanguagePage = () => {
 const List = ({ allPatterns, handleClick }) => {
 	return (
 		<ListWrapper>
-			{allPatterns.map(p => {
+			{allPatterns.map((p) => {
 				const { pattern, order } = p
 				return (
 					<li
@@ -136,15 +132,10 @@ interface ILanguageProps {
 	handleRemove?: () => void
 }
 
-const Language: FunctionComponent<ILanguageProps> = ({
-	language,
-	allPatterns,
-	handleAdd,
-	handleRemove,
-}) => {
+const Language: FunctionComponent<ILanguageProps> = ({ language, allPatterns, handleAdd, handleRemove }) => {
 	const { patterns, reviewed } = language
 	const list = Object.keys(patterns)
-		.map(p => allPatterns[p])
+		.map((p) => allPatterns[p])
 		.sort((a, b) => {
 			return a.order - b.order
 		})

@@ -2,23 +2,19 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
-import Hero from '../components/hero'
+// import Hero from '../components/hero'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
 	const { allAirtable } = useStaticQuery(graphql`
 		query {
 			allAirtable(
 				filter: {
 					table: { eq: "patterns" }
-					data: {
-						language: {
-							elemMatch: { data: { code: { eq: "BLD" } } }
-						}
-					}
+					data: { language: { elemMatch: { data: { code: { eq: "BLD" } } } } }
 				}
 			) {
 				edges {
@@ -51,54 +47,39 @@ const IndexPage = () => {
 		.map(({ node }, i) => {
 			return {
 				...node.data,
-				order: allAirtable.edges.length - i,
+				order: allAirtable.edges.length - i
 			}
 		})
 		.sort((a, b) => a.order - b.order)
 
-	const patterns = patternsArr.map(data => (
-		<PatternEntry key={data.slug} data={data} />
-	))
+	const patterns = patternsArr.map((data) => <PatternEntry key={data.slug} data={data} />)
 
 	return (
 		<Layout>
-			<SEO title="Home" />
+			<SEO title='Home' />
 			<SiteHeader>A Pattern Language</SiteHeader>
 			<p>
-				<em>
-					Which generates a human society and the structures to
-					support it.
-				</em>
+				<em>Which generates a human society and the structures to support it.</em>
 			</p>
 			<PatternList>{patterns}</PatternList>
 		</Layout>
 	)
 }
 
-const PatternEntry = ({ data }) => {
-	const {
-		order,
-		pattern,
-		problem,
-		solution,
-		slug,
-		depends_on = [],
-		supports = [],
-	} = data
+const PatternEntry = ({ data }: { data: any }) => {
+	const { order, pattern, problem, solution, slug, depends_on = [], supports = [] } = data
 
 	return (
 		<li key={slug} id={slug}>
-			<section>
+			<PatternWrapper>
 				<h2>{pattern}</h2>
-				{supports && <LinkList title="Supports" links={supports} />}
+				{supports && <LinkList title='Supports' links={supports} />}
 				<h3>Problem</h3>
 				<p>{problem}</p>
 				<h3>Solution</h3>
 				<p>{solution}</p>
-				{depends_on && (
-					<LinkList title="Depends on" links={depends_on} />
-				)}
-			</section>
+				{depends_on && <LinkList title='Depends on' links={depends_on} />}
+			</PatternWrapper>
 		</li>
 	)
 }
@@ -106,7 +87,7 @@ const PatternEntry = ({ data }) => {
 const SiteHeader = styled.h1`
 	margin-top: 2em;
 
-	@media (max-width: ${props => props.theme.media.sm}) {
+	@media (max-width: ${(props) => props.theme.media.sm}) {
 		margin-top: 1em;
 	}
 `
@@ -142,7 +123,7 @@ const LinkList = ({ links, title = '' }) => {
 
 	return (
 		<LinkListWrapper>
-			<li key="title">
+			<li key='title'>
 				<em>{title}:</em>
 			</li>
 			{listItems}
@@ -160,6 +141,15 @@ const LinkListWrapper = styled.ul`
 		margin: 0;
 		flex: 0 0 auto;
 		padding-right: 1rem;
+	}
+`
+
+const PatternWrapper = styled.section`
+	display: grid;
+	grid-template-columns: [main-start] 1fr [main-end aside-start] 100px [aside-end];
+
+	> * {
+		grid-column: main;
 	}
 `
 
