@@ -3,10 +3,11 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import { createMarkup } from '../helpers/markdown'
+import { media } from '../styles/theme'
 
-// import Hero from '../components/hero'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Star from '../assets/star.svg'
 
 const IndexPage: React.FC = () => {
 	const { allAirtable } = useStaticQuery(graphql`
@@ -58,10 +59,12 @@ const IndexPage: React.FC = () => {
 	return (
 		<Layout>
 			<SEO title='Home' />
-			<SiteHeader>A Pattern Language</SiteHeader>
-			<p>
-				<em>Which generates a human society and the structures to support it.</em>
-			</p>
+			<SiteHeader>
+				<h1>A Pattern Language</h1>
+				<p>
+					<em>Which generates a human society and the structures to support it.</em>
+				</p>
+			</SiteHeader>
 			<PatternList>{patterns}</PatternList>
 		</Layout>
 	)
@@ -70,10 +73,20 @@ const IndexPage: React.FC = () => {
 const PatternEntry = ({ data }: { data: any }) => {
 	const { order, pattern, significance, problem, solution, slug, depends_on = [], supports = [] } = data
 
+	const stars = []
+	if (significance > 0) {
+		for (let i = 1; i <= significance; i++) {
+			stars.push(<Star key={i} />)
+		}
+	}
+
 	return (
 		<li key={slug} id={slug}>
 			<PatternWrapper>
-				<h2>{pattern}</h2>
+				<h2 className='pattern-header'>
+					<span className='pattern-name'>{pattern}</span>
+					<span className='pattern-significance'>{stars}</span>
+				</h2>
 				{supports && <LinkList title='Supports' links={supports} />}
 				<h3>Problem</h3>
 				<div dangerouslySetInnerHTML={createMarkup(problem)} />
@@ -85,24 +98,38 @@ const PatternEntry = ({ data }: { data: any }) => {
 	)
 }
 
-const SiteHeader = styled.h1`
-	margin-top: 2em;
+const SiteHeader = styled.div`
+	h1 {
+		margin-top: 2em;
+	}
 
-	@media (max-width: ${(props) => props.theme.media.sm}) {
-		margin-top: 1em;
+	@media (max-width: ${media('sm')}) {
+		text-align: center;
+
+		h1 {
+			margin-top: 1.5em;
+		}
 	}
 `
 
 const PatternList = styled.ol`
 	list-style: none;
 	counter-reset: pattern-counter;
+	margin-top: 0;
 
 	> li {
 		counter-increment: pattern-counter;
+		max-width: 100%;
+		overflow-x: auto;
 	}
 
-	h2:before {
+	> li:first-child {
+		margin-top: 0;
+	}
+
+	.pattern-name:before {
 		content: '#' counter(pattern-counter) '. ';
+		white-space: nowrap;
 	}
 
 	h2 {
@@ -142,15 +169,46 @@ const LinkListWrapper = styled.ul`
 		margin: 0;
 		flex: 0 0 auto;
 		padding-right: 1rem;
+		max-width: 100%;
 	}
 `
 
 const PatternWrapper = styled.section`
-	display: grid;
-	grid-template-columns: [main-start] 1fr [main-end aside-start] 100px [aside-end];
+	.pattern-header {
+		display: flex;
+	}
 
-	> * {
-		grid-column: main;
+	.pattern-name {
+		flex: 1;
+	}
+
+	.pattern-significance {
+		justify-self: flex-end;
+		white-space: nowrap;
+		margin-left: 0.5em;
+
+		svg {
+			width: 0.9em;
+			text-align: baseline;
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	.pattern-significance:empty {
+		display: none;
+	}
+
+	@media (max-width: ${media('sm')}) {
+		.pattern-header {
+			flex-wrap: wrap;
+		}
+
+		.pattern-significance {
+			flex: 1 0 100%;
+			text-align: center;
+			margin: 1rem 0 0;
+		}
 	}
 `
 

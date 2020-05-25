@@ -20,6 +20,14 @@ const GlobalStyle = createGlobalStyle`
 		}
 	}
 
+	h1 {
+		line-height: 1.4;
+	}
+
+	h2 {
+		line-height: 1.5;
+	}
+
 	a {
 		color: currentColor;
 		font-family: ${font('mono')};
@@ -58,6 +66,10 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 1.1em;
 		font-style: italic;
 		margin-left: 1.5em;
+	}
+
+	svg {
+		fill: currentColor;
 	}
 `
 
