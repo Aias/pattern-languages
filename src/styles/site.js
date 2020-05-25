@@ -53,6 +53,12 @@ const GlobalStyle = createGlobalStyle`
 			opacity: 1;
 		}
 	}
+
+	blockquote {
+		font-size: 1.1em;
+		font-style: italic;
+		margin-left: 1.5em;
+	}
 `
 
 export default GlobalStyle
