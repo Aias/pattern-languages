@@ -1,6 +1,6 @@
 const theme = {
 	media: {
-		sm: '600px',
+		sm: '800px',
 		md: '1000px',
 		lg: '1600px'
 	},

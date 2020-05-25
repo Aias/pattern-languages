@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 0.9em;
 		transition: all 0.1s;
 		position: relative;
+		cursor: pointer;
 
 		::before {
 			position: absolute;
@@ -41,10 +42,10 @@ const GlobalStyle = createGlobalStyle`
 			z-index: -1;
 			display: block;
 			content: '';
-			top: -6px;
-			right: -6px;
-			bottom: -6px;
-			left: -6px;
+			top: -0.4em;
+			right: -0.4em;
+			bottom: -0.4em;
+			left: -0.4em;
 			opacity: 0;
 			background-color: ${color('textPrimary')};
 		}

@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
 
-import theme from '../styles/theme'
+import theme, { media } from '../styles/theme'
 import GlobalStyle from '../styles/site'
 
 import Header from './header'
@@ -30,7 +30,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
 }
 
 const Main = styled.main`
-	max-width: 600px;
+	max-width: ${media('sm')};
 	margin: 0 auto;
 `
 

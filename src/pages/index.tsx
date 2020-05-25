@@ -59,13 +59,16 @@ const IndexPage: React.FC = () => {
 	return (
 		<Layout>
 			<SEO title='Home' />
-			<SiteHeader>
-				<h1>A Pattern Language</h1>
-				<p>
-					<em>Which generates a human society and the structures to support it.</em>
-				</p>
-			</SiteHeader>
-			<PatternList>{patterns}</PatternList>
+			<PatternsLayout>
+				<SiteHeader>
+					<h1>A Pattern Language</h1>
+					<p>
+						<em>Which generates a human society and the structures to support it.</em>
+					</p>
+				</SiteHeader>
+				<PatternList>{patterns}</PatternList>
+				<PatternNav patterns={patternsArr} />
+			</PatternsLayout>
 		</Layout>
 	)
 }
@@ -134,8 +137,74 @@ const PatternList = styled.ol`
 
 	h2 {
 		border-top: 2px solid currentColor;
-		margin-top: 1.5em;
-		padding-top: 1.5em;
+		margin-top: 2rem;
+		padding-top: 2rem;
+	}
+`
+
+const PatternNav = styled(({ className, patterns }) => {
+	console.log(patterns)
+	return (
+		<nav className={className}>
+			<ol>
+				{patterns.map(({ pattern, order, significance, slug }, i) => {
+					return (
+						<li key={`order-${pattern}`}>
+							<a href={`#${slug}`}>{pattern}</a>
+						</li>
+					)
+				})}
+			</ol>
+		</nav>
+	)
+})`
+	ol {
+		margin: 4rem 0 2rem;
+		padding: 0 1rem 0;
+		max-height: calc(100vh - 4rem);
+		position: sticky;
+		top: 2rem;
+		overflow-y: auto;
+		list-style: none;
+	}
+	li {
+		font-size: 0.8em;
+		line-height: 1.5;
+		margin: 0.75em 0;
+	}
+	a {
+		display: inline-block;
+	}
+`
+
+const PatternsLayout = styled.div`
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		'. header'
+		'nav main';
+	grid-column-gap: 3rem;
+
+	${SiteHeader} {
+		grid-area: header;
+	}
+
+	${PatternList} {
+		grid-area: main;
+	}
+
+	${PatternNav} {
+		grid-area: nav;
+	}
+
+	@media (max-width: 600px) {
+		display: flex;
+		flex-direction: column;
+
+		${PatternNav} {
+			display: none;
+		}
 	}
 `
 
