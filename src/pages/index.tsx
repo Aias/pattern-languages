@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-// import { Link } from 'gatsby'
+import { createMarkup } from '../helpers/markdown'
 
 // import Hero from '../components/hero'
 import Layout from '../components/layout'
@@ -22,6 +22,7 @@ const IndexPage: React.FC = () => {
 						data {
 							problem
 							solution
+							significance
 							slug
 							depends_on {
 								data {
@@ -67,7 +68,7 @@ const IndexPage: React.FC = () => {
 }
 
 const PatternEntry = ({ data }: { data: any }) => {
-	const { order, pattern, problem, solution, slug, depends_on = [], supports = [] } = data
+	const { order, pattern, significance, problem, solution, slug, depends_on = [], supports = [] } = data
 
 	return (
 		<li key={slug} id={slug}>
@@ -75,9 +76,9 @@ const PatternEntry = ({ data }: { data: any }) => {
 				<h2>{pattern}</h2>
 				{supports && <LinkList title='Supports' links={supports} />}
 				<h3>Problem</h3>
-				<p>{problem}</p>
+				<div dangerouslySetInnerHTML={createMarkup(problem)} />
 				<h3>Solution</h3>
-				<p>{solution}</p>
+				<div dangerouslySetInnerHTML={createMarkup(solution)} />
 				{depends_on && <LinkList title='Depends on' links={depends_on} />}
 			</PatternWrapper>
 		</li>
