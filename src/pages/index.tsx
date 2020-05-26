@@ -10,7 +10,7 @@ import SEO from '../components/seo'
 import Star from '../assets/star.svg'
 
 const IndexPage: React.FC = () => {
-	const { allAirtable } = useStaticQuery(graphql`
+	const { allAirtable: patternQuery } = useStaticQuery(graphql`
 		query {
 			allAirtable(
 				filter: {
@@ -45,11 +45,11 @@ const IndexPage: React.FC = () => {
 		}
 	`)
 
-	const patternsArr = allAirtable.edges
+	const patternsArr = patternQuery.edges
 		.map(({ node }, i) => {
 			return {
 				...node.data,
-				order: allAirtable.edges.length - i
+				order: patternQuery.edges.length - i
 			}
 		})
 		.sort((a, b) => a.order - b.order)
@@ -91,10 +91,18 @@ const PatternEntry = ({ data }: { data: any }) => {
 					<span className='pattern-significance'>{stars}</span>
 				</h2>
 				{supports && <LinkList title='Supports' links={supports} />}
-				<h3>Problem</h3>
-				<div dangerouslySetInnerHTML={createMarkup(problem)} />
-				<h3>Solution</h3>
-				<div dangerouslySetInnerHTML={createMarkup(solution)} />
+				{problem && (
+					<>
+						<h3>Problem</h3>
+						<div dangerouslySetInnerHTML={createMarkup(problem)} />
+					</>
+				)}
+				{solution && (
+					<>
+						<h3>Solution</h3>
+						<div dangerouslySetInnerHTML={createMarkup(solution)} />
+					</>
+				)}
 				{depends_on && <LinkList title='Depends on' links={depends_on} />}
 			</PatternWrapper>
 		</li>
@@ -143,7 +151,6 @@ const PatternList = styled.ol`
 `
 
 const PatternNav = styled(({ className, patterns }) => {
-	console.log(patterns)
 	return (
 		<nav className={className}>
 			<ol>
