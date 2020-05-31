@@ -12,6 +12,7 @@
 html {
 	height: 100%;
 	font-size: 100%;
+	background-color: #f5e9d8;
 }
 
 /* Set core body defaults */
@@ -89,6 +90,7 @@ img {
 
 svg {
 	fill: currentColor;
+	width: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
