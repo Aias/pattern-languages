@@ -16,7 +16,14 @@ module.exports = {
 	plugins: [
 		// For TypeScript stuff, see:
 		// https://medium.com/maxime-heckel/getting-started-with-typescript-on-gatsby-8544b47c1d27
-		`gatsby-plugin-typescript`,
+		{
+			resolve: `gatsby-plugin-typescript`,
+			options: {
+				isTSX: true, // defaults to false
+				jsxPragma: 'React', // defaults to "React"
+				allExtensions: true // defaults to false
+			}
+		},
 		// `gatsby-plugin-tslint`,
 		`@rhysforyou/gatsby-plugin-react-helmet-async`,
 		{

@@ -1,28 +1,25 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+// import { useStaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
 
 import theme, { media } from '../styles/theme'
 import GlobalStyle from '../styles/site'
 
-import Header from './header'
-
 const Layout: React.FunctionComponent = ({ children }) => {
-	const { site } = useStaticQuery(graphql`
-		query SiteTitleQuery {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-	`)
+	// const { site } = useStaticQuery(graphql`
+	// 	query SiteTitleQuery {
+	// 		site {
+	// 			siteMetadata {
+	// 				title
+	// 			}
+	// 		}
+	// 	}
+	// `)
 
 	return (
 		<ThemeProvider theme={theme}>
 			<>
 				<GlobalStyle />
-				<Header siteTitle={site.siteMetadata.title} />
 				<Main>{children}</Main>
 			</>
 		</ThemeProvider>

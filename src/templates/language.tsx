@@ -1,49 +1,59 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import { createMarkup } from '../helpers/markdown'
+import slugify from '../helpers/slugify'
 import { media } from '../styles/theme'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Star from '../assets/star.svg'
 
-const IndexPage: React.FC = () => {
-	const { allAirtable: patternQuery } = useStaticQuery(graphql`
-		query {
-			allAirtable(
-				filter: {
-					table: { eq: "patterns" }
-					data: { language: { elemMatch: { data: { code: { eq: "BLD" } } } } }
-				}
-			) {
-				edges {
-					node {
-						data {
-							problem
-							solution
-							significance
-							slug
-							depends_on {
-								data {
-									pattern
-									slug
-								}
+export const pageQuery = graphql`
+	query LanguageQuery($code: String = "BLD") {
+		allAirtable(
+			filter: { table: { eq: "patterns" }, data: { language: { elemMatch: { data: { code: { eq: $code } } } } } }
+		) {
+			edges {
+				node {
+					data {
+						pattern
+						problem
+						solution
+						significance
+						depends_on {
+							data {
+								pattern
 							}
-							supports {
-								data {
-									pattern
-									slug
-								}
+						}
+						supports {
+							data {
+								pattern
 							}
-							pattern
 						}
 					}
 				}
 			}
 		}
-	`)
+	}
+`
+
+interface ILanguageProps {
+	data?: any
+	pageContext?: {
+		languageMeta: {
+			authors: string
+			code: string
+			name: string
+			description: string
+		}
+	}
+}
+
+const Language: React.FC<ILanguageProps> = ({ data, pageContext }) => {
+	const { allAirtable: patternQuery } = data
+	const { authors, code, name, description } = pageContext.languageMeta
 
 	const patternsArr = patternQuery.edges
 		.map(({ node }, i) => {
@@ -54,17 +64,19 @@ const IndexPage: React.FC = () => {
 		})
 		.sort((a, b) => a.order - b.order)
 
-	const patterns = patternsArr.map((data) => <PatternEntry key={data.slug} data={data} />)
+	const patterns = patternsArr.map((data) => <PatternEntry key={data.pattern} data={data} />)
 
 	return (
 		<Layout>
 			<SEO title='Home' />
 			<PatternsLayout>
 				<SiteHeader>
-					<h1>A Pattern Language</h1>
-					<p>
-						<em>Which generates a human society and the structures to support it.</em>
-					</p>
+					<h1>{name}</h1>
+					{description && (
+						<p>
+							<em>{description}</em>
+						</p>
+					)}
 				</SiteHeader>
 				<PatternList>{patterns}</PatternList>
 				<PatternNav patterns={patternsArr} />
@@ -74,7 +86,8 @@ const IndexPage: React.FC = () => {
 }
 
 const PatternEntry = ({ data }: { data: any }) => {
-	const { order, pattern, significance, problem, solution, slug, depends_on = [], supports = [] } = data
+	const { order, pattern, significance, problem, solution, depends_on = [], supports = [] } = data
+	const slug = slugify(pattern)
 
 	const stars = []
 	if (significance > 0) {
@@ -84,7 +97,7 @@ const PatternEntry = ({ data }: { data: any }) => {
 	}
 
 	return (
-		<li key={slug} id={slug}>
+		<li id={slug}>
 			<PatternWrapper>
 				<h2 className='pattern-header'>
 					<span className='pattern-name'>{pattern}</span>
@@ -132,6 +145,7 @@ const PatternList = styled.ol`
 		counter-increment: pattern-counter;
 		max-width: 100%;
 		overflow-x: auto;
+		margin: 0;
 	}
 
 	> li:first-child {
@@ -154,10 +168,10 @@ const PatternNav = styled(({ className, patterns }) => {
 	return (
 		<nav className={className}>
 			<ol>
-				{patterns.map(({ pattern, order, significance, slug }, i) => {
+				{patterns.map(({ pattern, order, significance }, i) => {
 					return (
 						<li key={`order-${pattern}`}>
-							<a href={`#${slug}`}>{pattern}</a>
+							<a href={`#${slugify(pattern)}`}>{pattern}</a>
 						</li>
 					)
 				})}
@@ -217,7 +231,8 @@ const PatternsLayout = styled.div`
 
 const LinkList = ({ links, title = '' }) => {
 	const listItems = links.map(({ data }) => {
-		const { slug, pattern } = data
+		const { pattern } = data
+		const slug = slugify(pattern)
 		return (
 			<li key={slug}>
 				<a href={`#${slug}`}>{pattern}</a>
@@ -288,4 +303,4 @@ const PatternWrapper = styled.section`
 	}
 `
 
-export default IndexPage
+export default Language
