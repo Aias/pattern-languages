@@ -68,7 +68,7 @@ const Language: React.FC<ILanguageProps> = ({ data, pageContext }) => {
 
 	return (
 		<Layout>
-			<SEO title='Home' />
+			<SEO title={name} />
 			<PatternsLayout>
 				<SiteHeader>
 					<h1>{name}</h1>
