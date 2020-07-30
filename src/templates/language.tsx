@@ -7,6 +7,7 @@ import slugify from '../helpers/slugify'
 import { media } from '../styles/theme'
 
 import Layout from '../components/layout'
+import AnchorLink from '../components/anchorLink'
 import SEO from '../components/seo'
 import Star from '../assets/star.svg'
 
@@ -247,27 +248,6 @@ const LinkList = ({ links, title = '' }) => {
 			</li>
 			{listItems}
 		</LinkListWrapper>
-	)
-}
-
-const AnchorLink = ({ to = '', children, ...otherProps }) => {
-	return (
-		<a
-			href={`#${to}`}
-			onClick={(e) => {
-				e.preventDefault()
-
-				const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-				const el = document.getElementById(to)
-				el.scrollIntoView({
-					behavior: prefersReducedMotion ? 'auto' : 'smooth'
-				})
-			}}
-			{...otherProps}
-		>
-			{children}
-		</a>
 	)
 }
 
