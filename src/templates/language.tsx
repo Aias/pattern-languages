@@ -171,7 +171,7 @@ const PatternNav = styled(({ className, patterns }) => {
 				{patterns.map(({ pattern, order, significance }, i) => {
 					return (
 						<li key={`order-${pattern}`}>
-							<a href={`#${slugify(pattern)}`}>{pattern}</a>
+							<AnchorLink to={slugify(pattern)}>{pattern}</AnchorLink>
 						</li>
 					)
 				})}
@@ -235,7 +235,7 @@ const LinkList = ({ links, title = '' }) => {
 		const slug = slugify(pattern)
 		return (
 			<li key={slug}>
-				<a href={`#${slug}`}>{pattern}</a>
+				<AnchorLink to={slug}>{pattern}</AnchorLink>
 			</li>
 		)
 	})
@@ -247,6 +247,27 @@ const LinkList = ({ links, title = '' }) => {
 			</li>
 			{listItems}
 		</LinkListWrapper>
+	)
+}
+
+const AnchorLink = ({ to = '', children, ...otherProps }) => {
+	return (
+		<a
+			href={`#${to}`}
+			onClick={(e) => {
+				e.preventDefault()
+
+				const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+				const el = document.getElementById(to)
+				el.scrollIntoView({
+					behavior: prefersReducedMotion ? 'auto' : 'smooth'
+				})
+			}}
+			{...otherProps}
+		>
+			{children}
+		</a>
 	)
 }
 
