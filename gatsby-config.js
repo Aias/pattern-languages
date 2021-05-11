@@ -1,6 +1,4 @@
-require('dotenv').config({
-	path: `.env`
-})
+require("dotenv").config()
 
 const bases = {
 	patterns: `appfoH6qlLxFCVhV5`
@@ -25,7 +23,7 @@ module.exports = {
 			}
 		},
 		// `gatsby-plugin-tslint`,
-		`@rhysforyou/gatsby-plugin-react-helmet-async`,
+		`gatsby-plugin-react-helmet-async`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
