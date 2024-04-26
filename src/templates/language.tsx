@@ -1,15 +1,15 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import styled from 'styled-components'
+import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
-import { createMarkup } from '../helpers/markdown'
-import slugify from '../helpers/slugify'
-import { media } from '../styles/theme'
+import { createMarkup } from '../helpers/markdown';
+import slugify from '../helpers/slugify';
+import { media } from '../styles/theme';
 
-import Layout from '../components/layout'
-import AnchorLink from '../components/anchorLink'
-import SEO from '../components/seo'
-import Star from '../assets/star.svg'
+import Layout from '../components/layout';
+import AnchorLink from '../components/anchorLink';
+import SEO from '../components/seo';
+import Star from '../assets/star.svg';
 
 export const pageQuery = graphql`
 	query LanguageQuery($code: String = "BLD") {
@@ -38,34 +38,34 @@ export const pageQuery = graphql`
 			}
 		}
 	}
-`
+`;
 
 interface ILanguageProps {
-	data?: any
+	data?: any;
 	pageContext?: {
 		languageMeta: {
-			authors: string
-			code: string
-			name: string
-			description: string
-		}
-	}
+			authors: string;
+			code: string;
+			name: string;
+			description: string;
+		};
+	};
 }
 
 const Language: React.FC<ILanguageProps> = ({ data, pageContext }) => {
-	const { allAirtable: patternQuery } = data
-	const { authors, code, name, description } = pageContext.languageMeta
+	const { allAirtable: patternQuery } = data;
+	const { name, description } = pageContext.languageMeta;
 
 	const patternsArr = patternQuery.edges
 		.map(({ node }, i) => {
 			return {
 				...node.data,
 				order: patternQuery.edges.length - i
-			}
+			};
 		})
-		.sort((a, b) => a.order - b.order)
+		.sort((a, b) => a.order - b.order);
 
-	const patterns = patternsArr.map((data) => <PatternEntry key={data.pattern} data={data} />)
+	const patterns = patternsArr.map((data) => <PatternEntry key={data.pattern} data={data} />);
 
 	return (
 		<Layout>
@@ -83,17 +83,17 @@ const Language: React.FC<ILanguageProps> = ({ data, pageContext }) => {
 				<PatternNav patterns={patternsArr} />
 			</PatternsLayout>
 		</Layout>
-	)
-}
+	);
+};
 
 const PatternEntry = ({ data }: { data: any }) => {
-	const { order, pattern, significance, problem, solution, depends_on = [], supports = [] } = data
-	const slug = slugify(pattern)
+	const { pattern, significance, problem, solution, depends_on = [], supports = [] } = data;
+	const slug = slugify(pattern);
 
-	const stars = []
+	const stars = [];
 	if (significance > 0) {
 		for (let i = 1; i <= significance; i++) {
-			stars.push(<Star key={i} />)
+			stars.push(<Star key={i} />);
 		}
 	}
 
@@ -120,8 +120,8 @@ const PatternEntry = ({ data }: { data: any }) => {
 				{depends_on && <LinkList title='Depends on' links={depends_on} />}
 			</PatternWrapper>
 		</li>
-	)
-}
+	);
+};
 
 const SiteHeader = styled.div`
 	h1 {
@@ -135,7 +135,7 @@ const SiteHeader = styled.div`
 			margin-top: 1.5em;
 		}
 	}
-`
+`;
 
 const PatternList = styled.ol`
 	list-style: none;
@@ -163,22 +163,22 @@ const PatternList = styled.ol`
 		margin-top: 2rem;
 		padding-top: 2rem;
 	}
-`
+`;
 
 const PatternNav = styled(({ className, patterns }) => {
 	return (
 		<nav className={className}>
 			<ol>
-				{patterns.map(({ pattern, order, significance }, i) => {
+				{patterns.map(({ pattern }) => {
 					return (
 						<li key={`order-${pattern}`}>
 							<AnchorLink to={slugify(pattern)}>{pattern}</AnchorLink>
 						</li>
-					)
+					);
 				})}
 			</ol>
 		</nav>
-	)
+	);
 })`
 	ol {
 		margin: 4rem 0 2rem;
@@ -197,7 +197,7 @@ const PatternNav = styled(({ className, patterns }) => {
 	a {
 		display: inline-block;
 	}
-`
+`;
 
 const PatternsLayout = styled.div`
 	display: grid;
@@ -228,18 +228,18 @@ const PatternsLayout = styled.div`
 			display: none;
 		}
 	}
-`
+`;
 
 const LinkList = ({ links, title = '' }) => {
 	const listItems = links.map(({ data }) => {
-		const { pattern } = data
-		const slug = slugify(pattern)
+		const { pattern } = data;
+		const slug = slugify(pattern);
 		return (
 			<li key={slug}>
 				<AnchorLink to={slug}>{pattern}</AnchorLink>
 			</li>
-		)
-	})
+		);
+	});
 
 	return (
 		<LinkListWrapper>
@@ -248,8 +248,8 @@ const LinkList = ({ links, title = '' }) => {
 			</li>
 			{listItems}
 		</LinkListWrapper>
-	)
-}
+	);
+};
 
 const LinkListWrapper = styled.ul`
 	list-style-type: none;
@@ -263,7 +263,7 @@ const LinkListWrapper = styled.ul`
 		padding-right: 1rem;
 		max-width: 100%;
 	}
-`
+`;
 
 const PatternWrapper = styled.section`
 	.pattern-header {
@@ -302,6 +302,6 @@ const PatternWrapper = styled.section`
 			margin: 1rem 0 0;
 		}
 	}
-`
+`;
 
-export default Language
+export default Language;

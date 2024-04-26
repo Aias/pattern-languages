@@ -1,11 +1,10 @@
 {
 	"name": "pattern-languages",
-	"private": false,
+	"packageManager": "yarn@4.1.1",
 	"description": "Each pattern is a rule which describes what you have to do to generate the entity which it defines. It is a three-part rule, which expresses a relation between a certain context, a problem, and a solution.",
 	"version": "0.1.0",
 	"author": "Nick Trombley <trombley.nick@gmail.com>",
 	"dependencies": {
-		"@types/styled-components": "^5.1.20",
 		"async": "^3.2.3",
 		"gatsby": "^4.5.3",
 		"gatsby-image": "^3.11.0",
@@ -31,6 +30,7 @@
 		"@types/react": "^17.0.38",
 		"@types/react-dom": "^17.0.11",
 		"@types/react-helmet": "^6.1.5",
+		"@types/styled-components": "^5.1.20",
 		"@typescript-eslint/eslint-plugin": "^5.10.0",
 		"@typescript-eslint/parser": "^5.10.0",
 		"eslint": "^8.7.0",
@@ -49,9 +49,8 @@
 	],
 	"license": "MIT",
 	"scripts": {
-		"build": "gatsby build",
-		"dev": "gatsby develop",
-		"develop": "gatsby develop",
+		"build": "gatsby clean && gatsby build",
+		"dev": "gatsby clean && gatsby develop",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"start": "npm run develop",
 		"serve": "gatsby serve",

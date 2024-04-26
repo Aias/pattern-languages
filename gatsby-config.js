@@ -1,8 +1,8 @@
-require("dotenv").config()
+require('dotenv').config();
 
 const bases = {
 	patterns: `appfoH6qlLxFCVhV5`
-}
+};
 
 module.exports = {
 	siteMetadata: {
@@ -62,7 +62,7 @@ module.exports = {
 		{
 			resolve: `gatsby-source-airtable`,
 			options: {
-				apiKey: process.env.AIRTABLE_API_KEY,
+				apiKey: process.env.AIRTABLE_ACCESS_TOKEN,
 				tables: [
 					{
 						baseId: bases.patterns,
@@ -98,4 +98,4 @@ module.exports = {
 			}
 		}
 	]
-}
+};
