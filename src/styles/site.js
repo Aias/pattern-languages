@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
 		position: relative;
 		cursor: pointer;
 
-		::before {
+		&::before {
 			position: absolute;
 			pointer-events: none;
 			z-index: -1;
@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
 	a:hover, a:active, a:focus {
 		color: white;
 
-		::before {
+		&::before {
 			opacity: 1;
 		}
 	}

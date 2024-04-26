@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 
 interface ILinkProps {
-	to: string
+	to: string,
+	children: React.ReactNode,
 }
 
 const AnchorLink: React.FunctionComponent<ILinkProps> = ({ to = '', children, ...otherProps }) => {
