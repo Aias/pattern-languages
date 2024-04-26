@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"author": "Nick Trombley <trombley.nick@gmail.com>",
 	"dependencies": {
-		"async": "^3.2.3",
+		"async": "^3.2.5",
 		"gatsby": "^4.5.3",
 		"gatsby-image": "^3.11.0",
 		"gatsby-plugin-manifest": "^4.5.2",
@@ -33,10 +33,10 @@
 		"@types/styled-components": "^5.1.20",
 		"@typescript-eslint/eslint-plugin": "^5.10.0",
 		"@typescript-eslint/parser": "^5.10.0",
-		"eslint": "^8.7.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-react": "^7.28.0",
-		"prettier": "^2.5.1",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^8.10.0",
+		"eslint-plugin-react": "^7.34.1",
+		"prettier": "^2.8.8",
 		"typescript": "^4.5.4"
 	},
 	"keywords": [
