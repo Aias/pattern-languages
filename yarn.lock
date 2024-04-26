@@ -7966,7 +7966,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-manifest@npm:^4.5.2":
+"gatsby-plugin-manifest@npm:^4.25.0":
   version: 4.25.0
   resolution: "gatsby-plugin-manifest@npm:4.25.0"
   dependencies:
@@ -7981,7 +7981,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-offline@npm:^5.5.2":
+"gatsby-plugin-offline@npm:^5.25.0":
   version: 5.25.0
   resolution: "gatsby-plugin-offline@npm:5.25.0"
   dependencies:
@@ -8022,7 +8022,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-react-helmet-async@npm:^1.2.1":
+"gatsby-plugin-react-helmet-async@npm:^1.2.3":
   version: 1.2.3
   resolution: "gatsby-plugin-react-helmet-async@npm:1.2.3"
   peerDependencies:
@@ -8034,7 +8034,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-react-svg@npm:^3.1.0":
+"gatsby-plugin-react-svg@npm:^3.3.0":
   version: 3.3.0
   resolution: "gatsby-plugin-react-svg@npm:3.3.0"
   dependencies:
@@ -8045,7 +8045,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sharp@npm:^4.5.2":
+"gatsby-plugin-sharp@npm:^4.25.1":
   version: 4.25.1
   resolution: "gatsby-plugin-sharp@npm:4.25.1"
   dependencies:
@@ -8067,7 +8067,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-typescript@npm:^4.25.0, gatsby-plugin-typescript@npm:^4.5.2":
+"gatsby-plugin-typescript@npm:^4.25.0":
   version: 4.25.0
   resolution: "gatsby-plugin-typescript@npm:4.25.0"
   dependencies:
@@ -8139,7 +8139,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-airtable@npm:^2.2.1":
+"gatsby-source-airtable@npm:^2.4.2":
   version: 2.4.2
   resolution: "gatsby-source-airtable@npm:2.4.2"
   dependencies:
@@ -8152,7 +8152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^4.5.2":
+"gatsby-source-filesystem@npm:^4.25.0":
   version: 4.25.0
   resolution: "gatsby-source-filesystem@npm:4.25.0"
   dependencies:
@@ -8192,7 +8192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-transformer-sharp@npm:^4.5.0":
+"gatsby-transformer-sharp@npm:^4.25.0":
   version: 4.25.0
   resolution: "gatsby-transformer-sharp@npm:4.25.0"
   dependencies:
@@ -8221,7 +8221,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^4.5.3":
+"gatsby@npm:^4.25.8":
   version: 4.25.8
   resolution: "gatsby@npm:4.25.8"
   dependencies:
@@ -11649,22 +11649,22 @@ __metadata:
     eslint: "npm:^8.57.0"
     eslint-config-prettier: "npm:^8.10.0"
     eslint-plugin-react: "npm:^7.34.1"
-    gatsby: "npm:^4.5.3"
+    gatsby: "npm:^4.25.8"
     gatsby-image: "npm:^3.11.0"
-    gatsby-plugin-manifest: "npm:^4.5.2"
-    gatsby-plugin-offline: "npm:^5.5.2"
-    gatsby-plugin-react-helmet-async: "npm:^1.2.1"
-    gatsby-plugin-react-svg: "npm:^3.1.0"
-    gatsby-plugin-sharp: "npm:^4.5.2"
-    gatsby-plugin-typescript: "npm:^4.5.2"
-    gatsby-source-airtable: "npm:^2.2.1"
-    gatsby-source-filesystem: "npm:^4.5.2"
-    gatsby-transformer-sharp: "npm:^4.5.0"
+    gatsby-plugin-manifest: "npm:^4.25.0"
+    gatsby-plugin-offline: "npm:^5.25.0"
+    gatsby-plugin-react-helmet-async: "npm:^1.2.3"
+    gatsby-plugin-react-svg: "npm:^3.3.0"
+    gatsby-plugin-sharp: "npm:^4.25.1"
+    gatsby-plugin-typescript: "npm:^4.25.0"
+    gatsby-source-airtable: "npm:^2.4.2"
+    gatsby-source-filesystem: "npm:^4.25.0"
+    gatsby-transformer-sharp: "npm:^4.25.0"
     prettier: "npm:^2.8.8"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
     react-helmet: "npm:^6.1.0"
-    react-helmet-async: "npm:^1.2.2"
+    react-helmet-async: "npm:^1.3.0"
     remarkable: "npm:^2.0.1"
     remarkable-meta: "npm:^1.0.1"
     styled-components: "npm:^5.3.3"
@@ -12482,7 +12482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-helmet-async@npm:^1.2.2":
+"react-helmet-async@npm:^1.3.0":
   version: 1.3.0
   resolution: "react-helmet-async@npm:1.3.0"
   dependencies:
