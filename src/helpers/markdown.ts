@@ -1,19 +1,9 @@
-import { Remarkable } from 'remarkable'
-import meta from 'remarkable-meta'
+import { marked } from 'marked';
 
-const markdown = new Remarkable({
-	typographer: true,
+marked.setOptions({
 	breaks: true,
-	html: true
-}).use(meta)
+	gfm: true,
+});
 
-markdown.core.ruler.enable(['abbr'])
-
-const createMarkup = (htmlString: string): { __html: string } => {
-	return {
-		__html: markdown.render(htmlString)
-	}
-}
-
-export default markdown
-export { createMarkup }
+export const renderMarkdown = (content: string): string =>
+	marked.parse(content, { async: false });
