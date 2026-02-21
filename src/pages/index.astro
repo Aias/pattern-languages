@@ -1,227 +1,264 @@
 ---
-import Base from '../layouts/Base.astro';
-import AnchorLink from '../components/anchorLink';
-import { getPatterns } from '../lib/airtable';
-import type { Pattern, PatternRef } from '../lib/airtable';
-import { renderMarkdown } from '../helpers/markdown';
-import slugify from '../helpers/slugify';
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import AnchorLink from "../components/anchorLink";
 
-const title = 'A Pattern Language';
-const description = 'Which generates a human society and the structures to support it.';
-const patterns: Pattern[] = await getPatterns();
+const title = "A Pattern Language";
+const description =
+  "Which generates a human society and the structures to support it.";
+
+const patternsRaw = await getCollection("patterns");
+
+// Sort by number (nullish last)
+const patterns = patternsRaw.sort((a, b) => {
+  const left = a.data.number ?? Number.POSITIVE_INFINITY;
+  const right = b.data.number ?? Number.POSITIVE_INFINITY;
+  return left - right;
+});
+
+// Build slug -> title map for resolving references
+const slugToTitle = new Map(
+  patterns.map((p) => [p.slug, p.data.title] as const),
+);
 ---
 
 <Base title={title} description={description}>
-	<div class="patterns-layout">
-		<div class="site-header">
-			<h1>{title}</h1>
-			{description && <p><em>{description}</em></p>}
-		</div>
+  <div class="patterns-layout">
+    <div class="site-header">
+      <h1>{title}</h1>
+      {
+        description && (
+          <p>
+            <em>{description}</em>
+          </p>
+        )
+      }
+    </div>
 
-		<ol class="pattern-list">
-			{patterns.map((pattern) => (
-				<li id={slugify(pattern.pattern)}>
-					<section class="pattern-wrapper">
-						<h2 class="pattern-header">
-							<span class="pattern-name">{pattern.pattern}</span>
-							<span class="pattern-significance">
-								{Array.from({ length: pattern.significance }).map(() => (
-									<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-										<path d="M100 157.7L161.8 195L145.4 124.7L200 77.4L128.1 71.3L100 5L71.9 71.3L0 77.4L54.6 124.7L38.2 195L100 157.7Z" />
-									</svg>
-								))}
-							</span>
-						</h2>
+    <ol class="pattern-list">
+      {
+        patterns.map(async (pattern) => {
+          const { Content } = await pattern.render();
+          const supports = pattern.data.supports.flatMap((slug) => {
+            const title = slugToTitle.get(slug);
+            return title ? [{ slug, title }] : [];
+          });
+          const dependsOn = pattern.data.dependsOn.flatMap((slug) => {
+            const title = slugToTitle.get(slug);
+            return title ? [{ slug, title }] : [];
+          });
 
-						{pattern.supports.length > 0 && (
-							<ul class="link-list">
-								<li><em>Supports:</em></li>
-								{pattern.supports.map((ref: PatternRef) => (
-									<li>
-										<AnchorLink client:visible to={slugify(ref.pattern)}>{ref.pattern}</AnchorLink>
-									</li>
-								))}
-							</ul>
-						)}
+          return (
+            <li id={pattern.slug}>
+              <section class="pattern-wrapper">
+                <h2 class="pattern-header">
+                  <span class="pattern-name">{pattern.data.title}</span>
+                  <span class="pattern-significance">
+                    {Array.from({ length: pattern.data.significance }).map(
+                      () => (
+                        <svg
+                          viewBox="0 0 200 200"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                        >
+                          <path d="M100 157.7L161.8 195L145.4 124.7L200 77.4L128.1 71.3L100 5L71.9 71.3L0 77.4L54.6 124.7L38.2 195L100 157.7Z" />
+                        </svg>
+                      ),
+                    )}
+                  </span>
+                </h2>
 
-						{pattern.problem && (
-							<>
-								<h3>Problem</h3>
-								<div set:html={renderMarkdown(pattern.problem)} />
-							</>
-						)}
+                {supports.length > 0 && (
+                  <ul class="link-list">
+                    <li>
+                      <em>Supports:</em>
+                    </li>
+                    {supports.map((ref) => (
+                      <li>
+                        <AnchorLink client:visible to={ref.slug}>
+                          {ref.title}
+                        </AnchorLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-						{pattern.solution && (
-							<>
-								<h3>Solution</h3>
-								<div set:html={renderMarkdown(pattern.solution)} />
-							</>
-						)}
+                <Content />
 
-						{pattern.dependsOn.length > 0 && (
-							<ul class="link-list">
-								<li><em>Depends on:</em></li>
-								{pattern.dependsOn.map((ref: PatternRef) => (
-									<li>
-										<AnchorLink client:visible to={slugify(ref.pattern)}>{ref.pattern}</AnchorLink>
-									</li>
-								))}
-							</ul>
-						)}
-					</section>
-				</li>
-			))}
-		</ol>
+                {dependsOn.length > 0 && (
+                  <ul class="link-list">
+                    <li>
+                      <em>Depends on:</em>
+                    </li>
+                    {dependsOn.map((ref) => (
+                      <li>
+                        <AnchorLink client:visible to={ref.slug}>
+                          {ref.title}
+                        </AnchorLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            </li>
+          );
+        })
+      }
+    </ol>
 
-		<nav class="pattern-nav">
-			<ol>
-				{patterns.map((pattern) => (
-					<li>
-						<AnchorLink client:visible to={slugify(pattern.pattern)}>{pattern.pattern}</AnchorLink>
-					</li>
-				))}
-			</ol>
-		</nav>
-	</div>
+    <nav class="pattern-nav">
+      <ol>
+        {
+          patterns.map((pattern) => (
+            <li>
+              <AnchorLink client:visible to={pattern.slug}>
+                {pattern.data.title}
+              </AnchorLink>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+  </div>
 </Base>
 
 <style>
-	.patterns-layout {
-		display: grid;
-		grid-template-columns: 200px 1fr;
-		grid-template-rows: auto 1fr;
-		grid-template-areas:
-			'. header'
-			'nav main';
-		column-gap: 3rem;
-	}
+  .patterns-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      ". header"
+      "nav main";
+    column-gap: 3rem;
+  }
 
-	.site-header {
-		grid-area: header;
-	}
+  .site-header {
+    grid-area: header;
+  }
 
-	.site-header h1 {
-		margin-top: 2em;
-	}
+  .site-header h1 {
+    margin-top: 2em;
+  }
 
-	.pattern-list {
-		grid-area: main;
-		list-style: none;
-		counter-reset: pattern-counter;
-		margin-top: 0;
-	}
+  .pattern-list {
+    grid-area: main;
+    list-style: none;
+    counter-reset: pattern-counter;
+    margin-top: 0;
+  }
 
-	.pattern-list > li {
-		counter-increment: pattern-counter;
-		max-width: 100%;
-		overflow-x: auto;
-		margin: 0;
-	}
+  .pattern-list > li {
+    counter-increment: pattern-counter;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0;
+  }
 
-	.pattern-list > li:first-child {
-		margin-top: 0;
-	}
+  .pattern-list > li:first-child {
+    margin-top: 0;
+  }
 
-	.pattern-list .pattern-name::before {
-		content: '#' counter(pattern-counter) '. ';
-		white-space: nowrap;
-	}
+  .pattern-list .pattern-name::before {
+    content: "#" counter(pattern-counter) ". ";
+    white-space: nowrap;
+  }
 
-	.pattern-list h2 {
-		border-top: 2px solid currentColor;
-		margin-top: 2rem;
-		padding-top: 2rem;
-	}
+  .pattern-list h2 {
+    border-top: 2px solid currentColor;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
 
-	.pattern-nav {
-		grid-area: nav;
-	}
+  .pattern-nav {
+    grid-area: nav;
+  }
 
-	.pattern-nav ol {
-		margin: 4rem 0 2rem;
-		padding: 0 1rem 0;
-		max-height: calc(100vh - 4rem);
-		position: sticky;
-		top: 2rem;
-		overflow-y: auto;
-		list-style: none;
-	}
+  .pattern-nav ol {
+    margin: 4rem 0 2rem;
+    padding: 0 1rem 0;
+    max-height: calc(100vh - 4rem);
+    position: sticky;
+    top: 2rem;
+    overflow-y: auto;
+    list-style: none;
+  }
 
-	.pattern-nav li {
-		font-size: 0.8em;
-		line-height: 1.5;
-		margin: 0.75em 0;
-	}
+  .pattern-nav li {
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin: 0.75em 0;
+  }
 
-	.pattern-nav a {
-		display: inline-block;
-	}
+  .pattern-nav a {
+    display: inline-block;
+  }
 
-	.pattern-wrapper .pattern-header {
-		display: flex;
-	}
+  .pattern-wrapper .pattern-header {
+    display: flex;
+  }
 
-	.pattern-wrapper .pattern-name {
-		flex: 1;
-	}
+  .pattern-wrapper .pattern-name {
+    flex: 1;
+  }
 
-	.pattern-wrapper .pattern-significance {
-		justify-self: flex-end;
-		white-space: nowrap;
-		margin-left: 0.5em;
-	}
+  .pattern-wrapper .pattern-significance {
+    justify-self: flex-end;
+    white-space: nowrap;
+    margin-left: 0.5em;
+  }
 
-	.pattern-wrapper .pattern-significance svg {
-		width: 0.9em;
-		text-align: baseline;
-		position: relative;
-		top: 2px;
-	}
+  .pattern-wrapper .pattern-significance svg {
+    width: 0.9em;
+    text-align: baseline;
+    position: relative;
+    top: 2px;
+  }
 
-	.pattern-wrapper .pattern-significance:empty {
-		display: none;
-	}
+  .pattern-wrapper .pattern-significance:empty {
+    display: none;
+  }
 
-	.link-list {
-		list-style-type: none;
-		padding: 0;
-		display: inline-flex;
-		flex-flow: row wrap;
-	}
+  .link-list {
+    list-style-type: none;
+    padding: 0;
+    display: inline-flex;
+    flex-flow: row wrap;
+  }
 
-	.link-list > li {
-		margin: 0;
-		flex: 0 0 auto;
-		padding-right: 1rem;
-		max-width: 100%;
-	}
+  .link-list > li {
+    margin: 0;
+    flex: 0 0 auto;
+    padding-right: 1rem;
+    max-width: 100%;
+  }
 
-	@media (max-width: 800px) {
-		.site-header {
-			text-align: center;
-		}
+  @media (max-width: 800px) {
+    .site-header {
+      text-align: center;
+    }
 
-		.site-header h1 {
-			margin-top: 1.5em;
-		}
+    .site-header h1 {
+      margin-top: 1.5em;
+    }
 
-		.patterns-layout {
-			display: flex;
-			flex-direction: column;
-		}
+    .patterns-layout {
+      display: flex;
+      flex-direction: column;
+    }
 
-		.pattern-nav {
-			display: none;
-		}
+    .pattern-nav {
+      display: none;
+    }
 
-		.pattern-wrapper .pattern-header {
-			flex-wrap: wrap;
-		}
+    .pattern-wrapper .pattern-header {
+      flex-wrap: wrap;
+    }
 
-		.pattern-wrapper .pattern-significance {
-			flex: 1 0 100%;
-			text-align: center;
-			margin: 1rem 0 0;
-		}
-	}
+    .pattern-wrapper .pattern-significance {
+      flex: 1 0 100%;
+      text-align: center;
+      margin: 1rem 0 0;
+    }
+  }
 </style>
