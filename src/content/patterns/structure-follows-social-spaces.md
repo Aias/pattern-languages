@@ -10,10 +10,10 @@ dependsOn:
   - "gradual-stiffening"
 ---
 
-## Problem
+### Problem
 
 No building ever feels right to the people in it unless the physical spaces (defined by columns, walls, and ceilings) are congruent with the social spaces (defined by activities and human groups).
 
-## Solution
+### Solution
 
 A first principle of construction: on no account allow the engineering to dictate the building's form. Place the load bearing elements—the columns and the walls and floors—according to the social space of the building; never modify the social spaces to conform to the engineering structure of the building.

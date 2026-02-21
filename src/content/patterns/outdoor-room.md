@@ -21,10 +21,10 @@ supports:
   - "sunny-place"
 ---
 
-## Problem
+### Problem
 
 A garden is the place for lying in the grass, swinging, croquet, growing flowers, throwing a ball for the dog. But there is another way of being outdoors: and its needs are not met by the garden at all.
 
-## Solution
+### Solution
 
 Build a place outdoors which has so much enclosure round it, that it takes on the feeling of a room, even though it is open to the sky. To do this, define it at the corners with columns, perhaps roof it partially with a trellis or a sliding canvas roof, and create "walls" around it, with fences, sitting walls, screens, hedges, or the exterior walls of the building itself.

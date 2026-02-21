@@ -15,11 +15,11 @@ supports:
   - "pedestrian-street"
 ---
 
-## Problem
+### Problem
 
 We came from the water; our bodies are largely water; and water plays a fundamental role in our psychology. We need constant access to water, all around us; and we cannot have it without reverence for water in all its forms. But everywhere in cities water is out of reach.
 
-## Solution
+### Solution
 
 Preserve natural pools and streams and allow them to run through the city; make paths for people to walk along them and footbridges to cross them. Let the streams form natural barriers in the city, with traffic crossing them only infrequently on bridges.
 

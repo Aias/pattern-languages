@@ -14,10 +14,10 @@ supports:
   - "building-thoroughfare"
 ---
 
-## Problem
+### Problem
 
 A street without windows is blind and frightening. And it is equally uncomfortable to be in a house which bounds a public street with no window at all on the street.
 
-## Solution
+### Solution
 
 Where buildings run alongside busy streets, build windows with window seats, looking out onto the street. Place them in bedrooms or at some point on a passage or stair, where people keep passing by. On the first floor, keep these windows high enough to be private.

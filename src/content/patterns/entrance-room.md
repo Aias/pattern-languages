@@ -21,10 +21,10 @@ supports:
   - "private-terrace-on-the-street"
 ---
 
-## Problem
+### Problem
 
 Arriving in a building, or leaving it, you need a room to pass through, both inside the building and outside it. This is the entrance room.
 
-## Solution
+### Solution
 
 At the main entrance to a building, make a light-filled room which marks the entrance and straddles the boundary between indoors and outdoors, covering some space outdoors and some space indoors. The outside part may be like an old-fashioned porch; the inside like a hall or sitting room.

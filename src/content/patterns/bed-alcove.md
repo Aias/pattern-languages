@@ -17,11 +17,11 @@ supports:
   - "a-room-of-ones-own"
 ---
 
-## Problem
+### Problem
 
 Bedrooms make no sense.
 
-## Solution
+### Solution
 
 Don't put single beds in empty rooms called bedrooms, but instead put individual bed alcoves off rooms with other nonsleeping functions, so the bed itself becomes a tiny private haven.
 

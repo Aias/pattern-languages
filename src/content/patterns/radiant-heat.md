@@ -12,10 +12,10 @@ supports:
   - "duct-space"
 ---
 
-## Problem
+### Problem
 
 This pattern is a biologically precise formulation of the intuition that sunlight and a hot blazing fire are the best kinds of heat.
 
-## Solution
+### Solution
 
 Choose a way of heating your space—especially those rooms where people are going to gather when it is cold—that is essentially a radiative process, where the heat comes more from radiation than convection.

@@ -22,10 +22,10 @@ supports:
   - "intimacy-gradient"
 ---
 
-## Problem
+### Problem
 
 Every corner of a building is a potential sitting space. But each sitting space has different needs for comfort and enclosure according to its position in the intimacy gradient.
 
-## Solution
+### Solution
 
 Put in a sequence of graded sitting spaces throughout the building, varying according to their degree of enclosure. Enclose the most formal ones entirely, in rooms by themselves; put the least formal ones in corners of other rooms, without any kind of screen around them; and place the intermediate ones with a partial enclosure round them to keep them connected to some larger space, but also partly separate.

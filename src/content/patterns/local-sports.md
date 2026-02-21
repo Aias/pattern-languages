@@ -15,10 +15,10 @@ supports:
   - "health-center"
 ---
 
-## Problem
+### Problem
 
 The human body does not wear out with use. On the contrary, it wears down when it is not used.
 
-## Solution
+### Solution
 
 Scatter places for team and individual sports through every work community and neighborhood: tennis, squash, table tennis, swimming, billiards, basketball, dancing, gymnasium...and make the action visible to passers-by, as an invitation to participate.

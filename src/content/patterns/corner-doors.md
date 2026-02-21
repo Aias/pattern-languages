@@ -14,10 +14,10 @@ supports:
   - "tapestry-of-light-and-dark"
 ---
 
-## Problem
+### Problem
 
 The success of a room depends to a great extent on the position of the doors. If the doors create a pattern of movement which destroys the places in the room, the room will never allow people to be comfortable.
 
-## Solution
+### Solution
 
 Except in very large rooms, a door only rarely makes sense in the middle of a wall. It does in an entrance room, for instance, because this room gets its character essentially from the door. But in most rooms, especially in small ones, put the doors as near the corners of the room as possible. If the room has two doors, and people move through it, keep both doors at one end of the room.

@@ -9,11 +9,11 @@ supports:
   - "independent-regions"
 ---
 
-## Problem
+### Problem
 
 If the population of a region is weighted too far toward small villages, modern civilization can never emerge; but if the population is weighted too far toward big cities, the earth will go to ruin because the population isn't where it needs to be, to take care of it.
 
-## Solution
+### Solution
 
 Encourage a birth and death process for towns within the region, which gradually has these effects:
 

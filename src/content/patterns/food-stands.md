@@ -14,10 +14,10 @@ supports:
   - "bus-stop"
 ---
 
-## Problem
+### Problem
 
 Many of our habits and institutions are bolstered by the fact that we can get simple, inexpensive food on the street, on the way to shopping, work, and friends.
 
-## Solution
+### Solution
 
 Concentrate food stands where cars and paths meet—either portable stands or small huts, or built into the fronts of buildings, half-open to the street.

@@ -17,10 +17,10 @@ supports:
   - "rooms-to-rent"
 ---
 
-## Problem
+### Problem
 
 If a teenager's place in the home does not reflect their need for a measure of independence, they will be locked in conflict with their family.
 
-## Solution
+### Solution
 
 To mark a child's coming of age, transform their place in the home into a kind of cottage that expresses in a physical way the beginnings of independence. Keep the cottage attached to the home, but make it a distinctly visible bulge, far away from the master bedroom, with its own private entrance, perhaps its own roof.

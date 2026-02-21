@@ -9,10 +9,10 @@ supports:
   - "city-country-fingers"
 ---
 
-## Problem
+### Problem
 
 The suburb is an obsolete and contradictory form of human settlement.
 
-## Solution
+### Solution
 
 In the zone where city and country meet, place country roads at least a mile apart, so that they enclose squares of countryside and farmland at least one square mile in area. Build homesteads along these roads, one lot deep, on lots of at least half an acre, with the square mile of open countryside or farmland behind the houses.

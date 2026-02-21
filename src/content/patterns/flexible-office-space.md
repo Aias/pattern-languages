@@ -16,11 +16,11 @@ supports:
   - "common-areas-at-the-heart"
 ---
 
-## Problem
+### Problem
 
 Is it possible to create a kind of space which is specifically tuned to the needs of people working, and yet capable of an infinite number of various arrangements and combinations within it?
 
-## Solution
+### Solution
 
 Lay out the office space as wings of open space, with free-standing columns around their edges, so they define half-private and common spaces opening into one another. Set down enough columns so that people can fill them in over the years, in many different ways—but always in a semi-permanent fashion.
 

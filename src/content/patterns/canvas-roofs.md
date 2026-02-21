@@ -17,10 +17,10 @@ supports:
   - "filtered-light"
 ---
 
-## Problem
+### Problem
 
 There is a very special beauty about tents and canvas awnings. The canvas has a softness, a suppleness, which is in harmony with wind and light and sun. A house or any buildings built with some canvas will touch all the elements more nearly than it can when it is made only with hard conventional materials.
 
-## Solution
+### Solution
 
 Build canvas roofs and walls and awnings wherever there are spaces which need softer light or partial shade in summer, or partial protection from mist and dew in autumn and winter. Build them to fold away, with ropes or wires to pull them, so that they can easily be opened.

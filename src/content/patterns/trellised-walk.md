@@ -16,10 +16,10 @@ supports:
   - "entrance-transition"
 ---
 
-## Problem
+### Problem
 
 Trellised walks have their own special beauty. They are so unique, so different from other ways of shaping a path, that they are almost archetypal.
 
-## Solution
+### Solution
 
 Where paths need special protection or where they need some intimacy, build a trellis over the path and plant it with climbing flowers. Use the trellis to help shape the outdoor spaces on either side of it.

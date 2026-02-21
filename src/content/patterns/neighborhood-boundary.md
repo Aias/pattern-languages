@@ -22,10 +22,10 @@ supports:
   - "community-of-7-000"
 ---
 
-## Problem
+### Problem
 
 The strength of the boundary is essential to a neighborhood. If the boundary is too weak the neighborhood will not be able to maintain its own identifiable character.
 
-## Solution
+### Solution
 
 Encourage the formation of a boundary around each neighborhood, to separate it from the next door neighborhoods. Form this boundary by closing down streets and limiting access to the neighborhood—cut the normal number of streets at least in half. Place gateways at those points where the restricted access paths cross the boundary; and make the boundary zone wide enough to contain meeting places for the common functions shares by several neighborhoods.

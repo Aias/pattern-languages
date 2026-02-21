@@ -14,11 +14,11 @@ supports:
   - "roof-layout"
 ---
 
-## Problem
+### Problem
 
 Again, the basic problem is to maintain the integrity of social spaces in the plan.
 
-## Solution
+### Solution
 
 Draw a vault plan, for every floor. Use two-way vaults most often; and one-way barrel vaults for any spaces which are more than twice as long as they are wide. Draw sections through the building as you plan the vaults, and bear the following facts in mind:
 

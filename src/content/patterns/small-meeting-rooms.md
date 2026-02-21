@@ -16,10 +16,10 @@ supports:
   - "small-work-groups"
 ---
 
-## Problem
+### Problem
 
 The larger meetings are, the less people get out of them. But institutions often put their money and attention into large meeting rooms and lecture halls.
 
-## Solution
+### Solution
 
 Make at least 70 percent of all meeting rooms really small—for 12 people or less. Locate them in the most public parts of the building, evenly scattered among the workplaces.

@@ -19,10 +19,10 @@ supports:
   - "paths-and-goals"
 ---
 
-## Problem
+### Problem
 
 Streets should be for staying in, and not just for moving through, the way they are today.
 
-## Solution
+### Solution
 
 Make a bulge in the middle of a public path, and make the ends narrower, so that the path forms an enclosure which is a place to stay, not just a place to pass through.

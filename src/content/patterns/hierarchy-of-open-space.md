@@ -19,11 +19,11 @@ supports:
   - "positive-outdoor-space"
 ---
 
-## Problem
+### Problem
 
 Outdoors, people always try to find a spot where they can have their backs protected, looking out toward some larger opening, beyond the space immediately in front of them.
 
-## Solution
+### Solution
 
 Whatever space you are shaping—whether it is a garden, terrace, street, park, public outdoor room, or courtyard, make sure of two things. First, make at least one smaller space, which looks into it and forms a natural back for it. Second, place it, and its openings, so that it looks into at least one larger space.
 

@@ -15,10 +15,10 @@ supports:
   - "small-public-squares"
 ---
 
-## Problem
+### Problem
 
 Why is it that people don't dance in the streets today?
 
-## Solution
+### Solution
 
 Along the promenades, in squares and evening centers, make a slightly raised platform to form a bandstand, where street musicians and local bands can play. Cover it, and perhaps build in at ground level tiny stalls for refreshment. Surround the bandstand with paved surface for dancing—no admission charge.

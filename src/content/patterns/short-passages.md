@@ -19,10 +19,10 @@ supports:
   - "circulation-realms"
 ---
 
-## Problem
+### Problem
 
 "...long, sterile corridors set the scene for everything bad about modern architecture."
 
-## Solution
+### Solution
 
 Keep passages short. Make them as much like rooms as possible, with carpets or wood on the floor, furniture, bookshelves, beautiful windows. Make them generous in shape, and always give them plenty of light; the best corridors and passages of all are those which have windows along an entire wall.

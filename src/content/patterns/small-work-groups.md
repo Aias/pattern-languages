@@ -15,10 +15,10 @@ supports:
   - "flexible-office-space"
 ---
 
-## Problem
+### Problem
 
 When more than half a dozen people work in the same place, it is essential that they not be forced to work in one huge undifferentiated space, but that instead, they can divide their workspace up, and so form smaller groups.
 
-## Solution
+### Solution
 
 Break institutions into small, spatially identifiable work groups, with less than half a dozen people in each. Arrange these work groups so that each person is in at least partial view of the other members of their own group; and arrange several groups in such a way that they share a common entrance, food, office equipment, drinking fountains, bathrooms.

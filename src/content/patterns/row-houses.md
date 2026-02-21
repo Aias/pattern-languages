@@ -19,10 +19,10 @@ supports:
   - "degrees-of-publicness"
 ---
 
-## Problem
+### Problem
 
 At densities of 15 to 30 houses per acre, row houses are essential. But typical row houses are dark inside, and stamped from an identical mould.
 
-## Solution
+### Solution
 
 For row houses, place houses along pedestrian paths that run at right angles to local roads and parking lots, and give each house a long frontage and a shallow depth.

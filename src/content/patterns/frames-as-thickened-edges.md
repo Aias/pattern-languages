@@ -13,11 +13,11 @@ supports:
   - "efficient-structure"
 ---
 
-## Problem
+### Problem
 
 Any homogenous membrane which has holes in it will tend to rupture at the holes, unless the edges of the holes are reinforced by thickening.
 
-## Solution
+### Solution
 
 Do not consider door and window frames as separate rigid structures which are inserted into holes in walls. Think of them instead as thickenings of the very fabric of the wall itself, made to protect the wall against the concentrations of stress which develop around openings.
 

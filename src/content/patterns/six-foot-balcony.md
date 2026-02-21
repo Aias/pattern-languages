@@ -14,10 +14,10 @@ supports:
   - "gallery-surround"
 ---
 
-## Problem
+### Problem
 
 Balconies and porches which are less than six feet deep are hardly ever used.
 
-## Solution
+### Solution
 
 Whenever you build a balcony, a porch, a gallery, or a terrace always make it at least six feet deep. If possible, recess at least a part of it into the building so that it is not cantilevered out and separated from the building by a simple line, and enclose it partially.

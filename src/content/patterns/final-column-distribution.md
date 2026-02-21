@@ -12,11 +12,11 @@ supports:
   - "ceiling-height-variety"
 ---
 
-## Problem
+### Problem
 
 How should the spacing of the secondary columns which stiffen the walls, vary with ceiling height, number of stories, and the size of rooms?
 
-## Solution
+### Solution
 
 Make column stiffeners furthest apart on the ground floor and closer and closer together as you go higher in the building. The exact column spacings for a particular building will depend on heights and loads and wall thicknesses. The numbers in the following table are for illustration only, but they show roughly what is needed.
 

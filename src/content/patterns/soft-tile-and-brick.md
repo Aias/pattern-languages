@@ -12,11 +12,11 @@ supports:
   - "paving-with-cracks-between-the-stones"
 ---
 
-## Problem
+### Problem
 
 How can a person feel the earth, or time, or any connection with his surroundings, when he is walking on the hard mechanical wash-easy surfaces of concrete, asphalt, hard-fired architectural paving bricks, or artificially concocted mixes like terrazo?
 
-## Solution
+### Solution
 
 Use bricks and tiles which are soft baked, low fired—so that they will wear with time, and show the marks of use.
 

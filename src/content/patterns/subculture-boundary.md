@@ -24,10 +24,10 @@ supports:
   - "mosaic-of-subcultures"
 ---
 
-## Problem
+### Problem
 
 The mosaic of subcultures requires that hundreds of different cultures live, in their own way, at full intensity, next door to one another. But subcultures have their own ecology. They can only live at full intensity, unhampered by their neighbors, if they are physically separated by physical boundaries.
 
-## Solution
+### Solution
 
 Separate neighboring subcultures with a swath of land at least 200 feet wide. Let this boundary be natural—wilderness, farmland, water—or man-made—railroads, major roads, parks, schools, some housing. Along the seam between two subcultures, build meeting places, share functions, touching each community.

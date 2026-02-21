@@ -18,11 +18,11 @@ supports:
   - "teenage-society"
 ---
 
-## Problem
+### Problem
 
 Departments and public services don't work if they are too large. When they are large, their human qualities vanish; they become bureaucratic; red tape takes over.
 
-## Solution
+### Solution
 
 In any institution whose departments provide public service:
 

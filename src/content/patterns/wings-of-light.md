@@ -24,10 +24,10 @@ supports:
   - "individually-owned-shops"
 ---
 
-## Problem
+### Problem
 
 Modern buildings are often shapes with no concern for natural light—they depend almost entirely on artificial light. But buildings which displace natural light as the major source of illumination are not fit places to spend the day.
 
-## Solution
+### Solution
 
 Arrange each building so that it breaks down into wings which correspond, approximately, to the most important natural social groups within the building. Make each wing long and as narrow as you can—never more than 25 feet wide.

@@ -12,11 +12,11 @@ supports:
   - "circulation-realms"
 ---
 
-## Problem
+### Problem
 
 A complex of buildings with no center is like a person without a head.
 
-## Solution
+### Solution
 
 For any collection of buildings, decide which building in the group houses the most essential function—which building is the soul of the group, as a human institution. Then form this building as the main building, with a central position, higher roof.
 

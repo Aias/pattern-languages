@@ -12,11 +12,11 @@ supports:
   - "open-stairs"
 ---
 
-## Problem
+### Problem
 
 We are putting this pattern in the language because our experiments have shown us that lay people often make mistakes about the volume which a staircase needs and therefore make their plans unbuildable.
 
-## Solution
+### Solution
 
 Make a two story volume to contain the stairs. It may be straight, L-shapes, U-shapes, or C-shapes. The stair may be 2 feet wide (for a very steep stair) or 5 feet wide for a generous shallow stair. But, in all cases, the entire stairwell must form one complete structural bay, two stories high.
 

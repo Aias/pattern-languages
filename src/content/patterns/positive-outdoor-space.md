@@ -20,10 +20,10 @@ supports:
   - "wings-of-light"
 ---
 
-## Problem
+### Problem
 
 Outdoor spaces which are merely "left over" between buildings will, in general, not be used.
 
-## Solution
+### Solution
 
 Make all outdoor spaces which surround and lie between your buildings positive. Give each one some degree of enclosure; surround each space with wings of buildings, trees, hedges, fences, arcades, and trellised walks, until it becomes an entity with a positive quality and does not spill out indefinitely around corners.

@@ -10,11 +10,11 @@ supports:
   - "farmhouse-kitchen"
 ---
 
-## Problem
+### Problem
 
 Cooking is uncomfortable if the kitchen counter is too short and also if it is too long.
 
-## Solution
+### Solution
 
 To strike the balance between the kitchen which is too small, and the kitchen which is too spread out, place the stove, sink, and food storage and counter in such a way that:
 

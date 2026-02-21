@@ -16,10 +16,10 @@ supports:
   - "circulation-realms"
 ---
 
-## Problem
+### Problem
 
 Buildings must always be built on those parts of the land which are in the worst condition, not the best.
 
-## Solution
+### Solution
 
 On no account place buildings in the places which are more beautiful. In fact, do the opposite. Consider the site and its buildings as a single living ecosystem. Leave those areas that are the most precious, beautiful, comfortable, and healthy as they are, and build new structures in those parts of the site which are least pleasant now.

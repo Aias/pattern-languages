@@ -14,10 +14,10 @@ supports:
   - "soft-inside-walls"
 ---
 
-## Problem
+### Problem
 
 The greens and greys of hospitals and office corridors are depressing and cold. Natural wood, sunlight, bright colors are warm. In some way, the warmth of the colors in a room makes a great deal of difference between comfort and discomfort.
 
-## Solution
+### Solution
 
 Choose surface colors which, together with the color of the natural light, reflected light, and artificial lights, create a warm light in the rooms.

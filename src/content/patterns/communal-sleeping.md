@@ -16,11 +16,11 @@ supports:
   - "bed-alcove"
 ---
 
-## Problem
+### Problem
 
 In many traditional and primitive cultures, sleep is a communal activity without the sexual overtones it has in the West today. We believe that it may be a vital social function, which plays a role as fundamental and as necessary to people as communal eating.
 
-## Solution
+### Solution
 
 Arrange the sleeping area so that there is the possibility for children and adults to sleep in the same space, in sight and sound of one another, at least as an occasional alternative to their more usual sleeping habits.
 

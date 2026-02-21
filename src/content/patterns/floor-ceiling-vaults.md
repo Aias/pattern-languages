@@ -15,10 +15,10 @@ supports:
   - "ceiling-height-variety"
 ---
 
-## Problem
+### Problem
 
 We seek a ceiling vault shape which will support a live load on the floor above, form the ceiling of the room below, and generate as little bending and tension as possible so that compressive materials can be relied on.
 
-## Solution
+### Solution
 
 Build floors and ceilings in the form of elliptical vaults, which rise between 13 and 20 percent of the shorter span. Use a type of construction which makes it possible to fit the vault to any shapes room after the walls and columns are in position: on no account use a prefabricated vault.

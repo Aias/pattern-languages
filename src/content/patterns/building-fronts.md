@@ -20,10 +20,10 @@ supports:
   - "activity-pockets"
 ---
 
-## Problem
+### Problem
 
 Building set-backs from the street, originally invented to protect the public welfare by giving every building light and air, have actually helped greatly to destroy the street as a social space.
 
-## Solution
+### Solution
 
 On no account allow set-backs between streets or paths or public open land the the buildings which front on them. The set-backs do nothing valuable and almost always destroy the value of the open areas between the buildings. Build right up to the paths; change the laws in all communities where obsolete by-laws make this impossible. And let the building fronts take on slightly uneven angles as they accommodate to the shape of the street.

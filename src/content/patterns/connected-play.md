@@ -13,10 +13,10 @@ supports:
   - "common-land"
 ---
 
-## Problem
+### Problem
 
 If children don't play enough with other children during the first five years of life, there is a great chance that they will have some kind of mental illness later in their lives.
 
-## Solution
+### Solution
 
 Lay out common land, paths, gardens, and bridges so that groups of at least 64 households are connected by a swath of land that does not cross traffic. Establish this land as the connected play space for the children in these households.

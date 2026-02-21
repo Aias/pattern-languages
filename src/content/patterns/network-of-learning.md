@@ -12,11 +12,11 @@ dependsOn:
   - "master-and-apprentices"
 ---
 
-## Problem
+### Problem
 
 In a society which emphasizes teaching, children and students—and adults—become passive and unable to think or act for themselves. Creative, active individuals can only grow up in a society which emphasizes learning instead of teaching.
 
-## Solution
+### Solution
 
 Instead of the lock-step of compulsory schooling in a fixed place, work in piecemeal ways to decentralize the process of learning and enrich it through contact with many places and people all over the city: workshops, teachers at home or walking through the city, professionals teaching younger children, museums, youth groups traveling, scholarly seminars, industrial workshops, old people, and so on.
 

@@ -17,10 +17,10 @@ supports:
   - "gradual-stiffening"
 ---
 
-## Problem
+### Problem
 
 We have already established the idea that the structural components of a building should be congruent with its social spaces.
 
-## Solution
+### Solution
 
 On your rough building plan, draw a dot to represent a column at the corner of every room and in the corners formed by lesser spaces like thick walls and alcoves. Then transfer these dots onto the ground out on the site with stakes.

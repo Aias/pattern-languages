@@ -18,11 +18,11 @@ supports:
   - "garden-seat"
 ---
 
-## Problem
+### Problem
 
 Where outdoor seats are set down without regard for view and climate, they will almost certainly be useless.
 
-## Solution
+### Solution
 
 Choosing good spots for outdoor seats is far more important than building fancy benches. Indeed, if the spot is right, the most simply kind of seat is perfect.
 

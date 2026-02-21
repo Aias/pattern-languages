@@ -15,11 +15,11 @@ dependsOn:
   - "structure-follows-social-spaces"
 ---
 
-## Problem
+### Problem
 
 A building cannot be a human building unless it is a complex of still smaller buildings or smaller parts which manifest its own internal social facts.
 
-## Solution
+### Solution
 
 Never build monolithic buildings. Whenever possible translate your building program into a building complex, whose parts manifest the actual social facts of the situation. At low densities, a building complex may take the form of a collection of small buildings connected by arcades, paths, bridges, shared gardens, and walls.
 

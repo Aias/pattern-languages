@@ -16,10 +16,10 @@ supports:
   - "life-cycle"
 ---
 
-## Problem
+### Problem
 
 No one stage in the life cycle is self-sufficient.
 
-## Solution
+### Solution
 
 Encourage growth toward a mix of household types in every neighborhood, and every cluster, so that one-person households, couples, families with children, and group households are side by side.

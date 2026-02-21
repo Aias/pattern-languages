@@ -12,10 +12,10 @@ supports:
   - "positive-outdoor-space"
 ---
 
-## Problem
+### Problem
 
 Isolated buildings are symptoms of a disconnected, sick society.
 
-## Solution
+### Solution
 
 Connect your building up, wherever possible, to the existing buildings round about. Do not keep set backs between buildings; instead, try to form new buildings as continuations of the older buildings.

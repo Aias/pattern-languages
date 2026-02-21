@@ -16,11 +16,11 @@ supports:
   - "windows-overlooking-life"
 ---
 
-## Problem
+### Problem
 
 Finding the right position for a window or a door is a subtle matter. But there are very few ways of building which take this into consideration.
 
-## Solution
+### Solution
 
 On no account use standard doors or windows. Make each window a different size, according to its place.
 

@@ -24,10 +24,10 @@ supports:
   - "front-door-bench"
 ---
 
-## Problem
+### Problem
 
 In many places, walls and fences between outdoor spaces are too high; but no boundary at all does injustice to the subtlety of the divisions between the spaces.
 
-## Solution
+### Solution
 
 Surround any natural outdoor area, and make minor boundaries between outdoor areas with low walls, about 16 inches high, and wide enough to sit on, at least 12 inches wide.

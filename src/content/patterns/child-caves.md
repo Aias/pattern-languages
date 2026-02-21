@@ -11,10 +11,10 @@ supports:
   - "thick-walls"
 ---
 
-## Problem
+### Problem
 
 Children love to be in tiny, cave-like places.
 
-## Solution
+### Solution
 
 Wherever children play, around the house, in the neighborhood, in schools, make small "caves" for them. Tuck these caves away in natural leftover spaces, under stairs, under kitchen counters. Keep the ceiling heights low—2 feet 6 inches to 4 feet—and the entrance tiny.

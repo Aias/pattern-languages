@@ -25,10 +25,10 @@ supports:
   - "raised-walk"
 ---
 
-## Problem
+### Problem
 
 The simple social intercourse created when people rub shoulders in public is one of the most essential kinds of social "glue" in society.
 
-## Solution
+### Solution
 
 Arrange buildings so that they form pedestrian streets with many entrances and open stairs directly from the upper stories to the street, so that even movement between rooms is outdoors, not just movement between buildings.

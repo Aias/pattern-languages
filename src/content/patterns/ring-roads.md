@@ -12,11 +12,11 @@ supports:
   - "web-of-public-transportation"
 ---
 
-## Problem
+### Problem
 
 It is not possible to avoid the need for high-speed roads in modern society; but it is essential to place them and build them in such a way that they do not destroy communities or countryside.
 
-## Solution
+### Solution
 
 Place high-speed roads (freeways and other major arteries) so that:
 

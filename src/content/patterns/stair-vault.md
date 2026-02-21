@@ -16,10 +16,10 @@ supports:
   - "good-materials"
 ---
 
-## Problem
+### Problem
 
 Within a building technology which uses compressive materials as much as possible, and excludes the use of wood, it is natural to build stairs over a vaulted void, simply to save weight and materials.
 
-## Solution
+### Solution
 
 Build a curved diagonal vault in the same way that you build your [Floor-Ceiling Vaults](219). Once the vault hardens, cover it with steps of lightweight concrete, trowel-formed into position.

@@ -10,10 +10,10 @@ supports:
   - "natural-doors-and-windows"
 ---
 
-## Problem
+### Problem
 
 Many buildings nowadays have no opening windows at all; and many of the opening windows that people do build, don't do the job that opening windows ought to do.
 
-## Solution
+### Solution
 
 Decide which of the windows will be opening windows. Pick those which are easy to get to, and choose the ones which open onto flowers you want to smell, paths where you might want to talk, and natural breezes. Then put in side-hung casements that open outward. Here and there, go all the way and build full French windows.

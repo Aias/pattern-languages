@@ -17,11 +17,11 @@ supports:
   - "building-thoroughfare"
 ---
 
-## Problem
+### Problem
 
 The sight of action is an incentive for action. When people can see into spaces from the street their world is enlarged and made richer, there is more understanding; and there is possibility for communication, learning.
 
-## Solution
+### Solution
 
 In any public space which depends for its success on its exposure to the street, open it up, with a fully opening wall which can be thrown wide open, and if it is possible, include some part of the activity on the far side of the pedestrian path, so that it actually straddles the path, and people walk through it as they walk along the path.
 

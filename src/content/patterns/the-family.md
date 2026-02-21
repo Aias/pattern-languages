@@ -19,11 +19,11 @@ supports:
   - "household-mix"
 ---
 
-## Problem
+### Problem
 
 The nuclear family is not by itself a viable social form.
 
-## Solution
+### Solution
 
 Set up processes which encourage groups of 8 to 12 people to come together and establish communal households. Morphologically, the important things are:
 

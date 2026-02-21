@@ -13,13 +13,13 @@ supports:
   - "the-distribution-of-towns"
 ---
 
-## Problem
+### Problem
 
 "I conceive that land belongs for use to a vast family, of which many are dead, few are living, and countless members are still unborn."
 
 — A Nigerian tribesman
 
-## Solution
+### Solution
 
 Define all farms as parks, where the public has a right to be; and make all regional parks into working farms.
 

@@ -12,10 +12,10 @@ supports:
   - "mosaic-of-subcultures"
 ---
 
-## Problem
+### Problem
 
 Individuals have no effective voice in any community of more than 5,000–10,000 persons.
 
-## Solution
+### Solution
 
 Decentralize city governments in a way that gives local control to communities of 5,000 to 10,000 persons. As nearly as possible, use natural geographic and historical boundaries to mark these communities. Give each community the power to initiate, decide, and execute the affairs that concern it closely: land use, housing, maintenance, streets, parks, police, schooling, welfare, neighborhood services.

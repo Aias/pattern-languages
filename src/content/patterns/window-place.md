@@ -16,10 +16,10 @@ supports:
   - "street-windows"
 ---
 
-## Problem
+### Problem
 
 Everybody loves window seats, bay windows, and big windows with low sills and comfortable chairs drawn up to them.
 
-## Solution
+### Solution
 
 In every room where you spend any length of time during the day, make at least one window into a "window place".

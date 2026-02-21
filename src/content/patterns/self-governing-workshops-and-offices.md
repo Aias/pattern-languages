@@ -14,10 +14,10 @@ supports:
   - "work-community"
 ---
 
-## Problem
+### Problem
 
 No one enjoys their work if they are a cog in a machine.
 
-## Solution
+### Solution
 
 Encourage the formation of self-governing workshops and offices of 5 to 20 workers. Make each group autonomous—with respect to organization, style, relation to other groups, hiring and firing, work schedule. Where the work is complicated and requires larger organizations, several of these work groups can federate and cooperate to produce complex artifacts and services.

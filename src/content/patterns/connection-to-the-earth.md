@@ -18,10 +18,10 @@ supports:
   - "six-foot-balcony"
 ---
 
-## Problem
+### Problem
 
 A house feels isolated from the nature around it, unless its floors are interleaved directly with the earth that is around the house.
 
-## Solution
+### Solution
 
 Connect the building to the earth around it by building a series of paths and terraces and steps around the edge. Place them deliberately to make the boundary ambiguous—so that it is impossible to say exactly where the building stops and earth begins.

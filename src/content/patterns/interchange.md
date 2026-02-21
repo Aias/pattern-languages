@@ -15,11 +15,11 @@ supports:
   - "local-transport-areas"
 ---
 
-## Problem
+### Problem
 
 Interchanges play a central role in public transportation. Unless the interchanges are working properly, the public transportation system will not be able to sustain itself.
 
-## Solution
+### Solution
 
 At every interchange in the web of transportation follow these principles:
 

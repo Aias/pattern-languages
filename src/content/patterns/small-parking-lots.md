@@ -16,10 +16,10 @@ supports:
   - "nine-percent-parking"
 ---
 
-## Problem
+### Problem
 
 Vast parking lots wreck the land for people.
 
-## Solution
+### Solution
 
 Make parking lots small, serving no more than five to seven cars, each lot surrounded by garden walls, hedges, fences, slopes, and trees, so that from outside the cars are almost invisible. Space these small lots so that they are at least 100 feet apart.

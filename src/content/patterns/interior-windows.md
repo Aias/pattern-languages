@@ -14,10 +14,10 @@ supports:
   - "half-open-wall"
 ---
 
-## Problem
+### Problem
 
 Windows are most often used to create connections between the indoor and the outdoors. But there are many cases when an indoor space needs a connecting window another indoor space.
 
-## Solution
+### Solution
 
 Put in fully glazed fixed windows between rooms which tend to be dead because they have too little action in them or where inside rooms are unusually dark.

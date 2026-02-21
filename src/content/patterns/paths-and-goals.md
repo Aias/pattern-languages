@@ -22,10 +22,10 @@ supports:
   - "circulation-realms"
 ---
 
-## Problem
+### Problem
 
 The layout of paths will seem right and comfortable only when it is compatible with the process of walking. And the process of walking is far more subtle than one might imagine.
 
-## Solution
+### Solution
 
 To lay out paths, first place goals at natural points of interest. Then connect the goals to one another to form the paths. The paths may be straight, or gently curving between goals; their paving should swell around the goal. The goals should never be more than a few hundred feet apart.

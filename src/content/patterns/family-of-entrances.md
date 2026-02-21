@@ -11,11 +11,11 @@ supports:
   - "circulation-realms"
 ---
 
-## Problem
+### Problem
 
 When a person arrives in a complex of offices or services or workshops, or in a group of related houses, there is a good chance they will experience confusion unless the whole collection is laid out before them, so that they can see the entrance of the place where they are going.
 
-## Solution
+### Solution
 
 Lay out the entrances to form a family. This means:
 

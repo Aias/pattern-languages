@@ -18,10 +18,10 @@ supports:
   - "trellised-walk"
 ---
 
-## Problem
+### Problem
 
 Thin columns, spindly columns, columns which take their shape from structural arguments alone, will never make a comfortable environment.
 
-## Solution
+### Solution
 
 When a column is free standing, make it as thick as a person—at least 12 inches, preferably 16 inches: and form places around it where people can sit and lean comfortably: a step, a small seat built up against the column, or a space formed by a pair of columns.

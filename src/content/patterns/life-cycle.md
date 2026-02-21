@@ -27,7 +27,7 @@ supports:
   - "identifiable-neighborhood"
 ---
 
-## Problem
+### Problem
 
 "All the world's a stage,
 And all the men and women merely players:
@@ -37,7 +37,7 @@ His acts being seven ages."
 
 — Shakespeare, As You Like It
 
-## Solution
+### Solution
 
 Make certain that the full cycle of life is represented and balanced in each community. Set the ideal of a balanced life cycle as a principal guide for the evolution of communities. This means:
 

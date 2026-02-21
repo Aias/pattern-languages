@@ -15,11 +15,11 @@ supports:
   - "good-materials"
 ---
 
-## Problem
+### Problem
 
 The fundamental philosophy behind the use of pattern languages is that buildings should be uniquely adapted to individual needs and sites; and that the plans of buildings should be rather loose and fluid, in order to accommodate these subtleties.
 
-## Solution
+### Solution
 
 Recognize that you are not assembling a building from components like an erector set, but that you are instead weaving a structure which starts out globally complete, but flimsy; then gradually making it stiffer but still rather flimsy; and only finally making it completely stiff and strong.
 

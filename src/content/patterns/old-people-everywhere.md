@@ -14,11 +14,11 @@ supports:
   - "household-mix"
 ---
 
-## Problem
+### Problem
 
 Old people need old people, but they also need the young, and young people need contact with the old.
 
-## Solution
+### Solution
 
 Create dwellings for some 50 old people in every neighborhood. Place these dwellings in three rings...
 

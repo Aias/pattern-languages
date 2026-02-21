@@ -14,11 +14,11 @@ supports:
   - "paths-and-goals"
 ---
 
-## Problem
+### Problem
 
 The archetypal zen view occurs in a famous Japanese house, which gives this pattern its name.
 
-## Solution
+### Solution
 
 If there is a beautiful view, don't spoil it by building huge windows that gape incessantly at it. Instead, put the windows which look onto the view at places of transition—along paths, in hallways, in entry ways, on stairs, between rooms.
 

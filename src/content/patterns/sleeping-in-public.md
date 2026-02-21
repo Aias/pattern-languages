@@ -15,10 +15,10 @@ supports:
   - "a-place-to-wait"
 ---
 
-## Problem
+### Problem
 
 It is a mark of success in a park, public lobby, or a porch, when people can come there and fall asleep.
 
-## Solution
+### Solution
 
 Keep the environment filled with ample benches, comfortable places, corners to sit on the ground, or lie in comfort in the sand. Make these places relatively sheltered, protected from circulation, perhaps up a step, with seats and grass to slump down upon, read the paper and doze off.

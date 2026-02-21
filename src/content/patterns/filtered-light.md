@@ -12,10 +12,10 @@ supports:
   - "deep-reveals"
 ---
 
-## Problem
+### Problem
 
 Light filtered through leaves, or tracery, is wonderful. But why?
 
-## Solution
+### Solution
 
 Where the edge of a window or the overhanging eave of a roof is silhouetted against the sky, make a rich, detailed tapestry of light and dark, to break up the light and soften it.

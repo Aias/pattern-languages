@@ -16,11 +16,11 @@ supports:
   - "intimacy-gradient"
 ---
 
-## Problem
+### Problem
 
 If the right rooms are facing south, a house is bright and sunny and cheerful; if the wrong rooms are facing south, the house is dark and gloomy.
 
-## Solution
+### Solution
 
 Place the most important rooms along the south edge of the building, and spread the building out along the east-west axis.
 

@@ -17,10 +17,10 @@ supports:
   - "four-story-limit"
 ---
 
-## Problem
+### Problem
 
 Within the four-story height limit, just exactly how high should your buildings be?
 
-## Solution
+### Solution
 
 First, decide how many square feet of built space you need, and divide by the area of the site to get the floor area ratio. Then choose the height of your buildings according to the floor area ratio and the height of the surrounding buildings from the following table. In no case build on more than 50 percent of the land.

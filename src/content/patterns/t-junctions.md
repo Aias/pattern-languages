@@ -9,10 +9,10 @@ supports:
   - "looped-local-roads"
 ---
 
-## Problem
+### Problem
 
 Traffic accidents are far more frequent where two roads cross than at T Junctions.
 
-## Solution
+### Solution
 
 Lay out the road system so that any two roads which meet at grade, meet in three-way T junctions as near to 90 degrees as possible. Avoid four-way intersections and crossing movements.

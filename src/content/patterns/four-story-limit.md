@@ -15,10 +15,10 @@ supports:
   - "magic-of-the-city"
 ---
 
-## Problem
+### Problem
 
 There is abundant evidence to show that high buildings make people crazy.
 
-## Solution
+### Solution
 
 In any urban area, no matter how dense, keep the majority of buildings four stories high or less. It is possible that certain buildings should exceed this limit, but they should never be buildings for human habitation.

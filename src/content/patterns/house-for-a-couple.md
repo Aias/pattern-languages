@@ -11,10 +11,10 @@ supports:
   - "house-cluster"
 ---
 
-## Problem
+### Problem
 
 In a small household shared by two, the most important problem which arises is the possibility that each may have too little opportunity for solitude or privacy.
 
-## Solution
+### Solution
 
 Conceive a house for a couple as being made up of two kinds of places—a shared couple's realm and individual private worlds. Imagine the shared realm as half-public and half-intimate; and the private worlds as entirely individual and private.

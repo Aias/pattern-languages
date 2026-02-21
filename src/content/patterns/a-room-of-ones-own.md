@@ -22,10 +22,10 @@ supports:
   - "common-areas-at-the-heart"
 ---
 
-## Problem
+### Problem
 
 No one can be close to others, without also having frequent opportunities to be alone.
 
-## Solution
+### Solution
 
 Give each member of the family a room of their own, especially adults. A minimum room of one's own is an alcove with a desk, shelves, and curtain. The maximum is a cottage—like a [Teenager's Cottage](154), or an [Old Age Cottage](155). In all cases, especially the adult ones, place these rooms at the far ends of the intimacy gradient—far from the common rooms.

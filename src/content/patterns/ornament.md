@@ -26,11 +26,11 @@ supports:
   - "sitting-wall"
 ---
 
-## Problem
+### Problem
 
 All people have the instinct to decorate their surroundings.
 
-## Solution
+### Solution
 
 Search around the building, and find those edges and transitions which need emphasis or extra binding energy. Corners, places where materials meet, door frames, windows, main entrances, the place where one wall meets another, the garden gate, a fence—all these are natural places which call out for ornament.
 

@@ -14,10 +14,10 @@ supports:
   - "network-of-paths-and-cars"
 ---
 
-## Problem
+### Problem
 
 Where paths cross roads, the cars have power to frighten and subdue the people walking, even when the people walking have the legal right-of-way.
 
-## Solution
+### Solution
 
 At any point where a pedestrian path crosses a road that has enough traffic to create more than a two second delay to people crossing, make a "knuckle" at the crossing: narrow the road to the width of the through lanes only; continue the pedestrian path through the crossing about a foot above the roadway; put in islands between lanes; slope the road up toward the crossing (1 in 6 maximum); mark the path with a canopy or shelter to make it visible.

@@ -14,10 +14,10 @@ supports:
   - "natural-doors-and-windows"
 ---
 
-## Problem
+### Problem
 
 High doorways are simple and convenient. But a lower door is often more profound.
 
-## Solution
+### Solution
 
 Instead of taking it for granted that your doors are simply 6' 8" rectangular openings to pass through, make at least some of your doorways low enough that the act of going through the door is a deliberate thoughtful passage from one place to another. Especially at the entrance to a house, at the entrance to a private room, or a fire corner—make the doorway lower than usual, perhaps even as low as 5' 8".

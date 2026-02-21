@@ -13,10 +13,10 @@ supports:
   - "small-work-groups"
 ---
 
-## Problem
+### Problem
 
 What is the right balance between privacy and connection in office work?
 
-## Solution
+### Solution
 
 Avoid closed off, separate, or private offices. Make every workroom, whether it is for a group of two or three people or for one person, half-open to the other workgroups and the world immediately beyond it. At the front, just inside the door, make comfortable sitting space, with the actual workspace(s) away from the door, and further back.

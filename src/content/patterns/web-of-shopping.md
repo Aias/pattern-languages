@@ -15,11 +15,11 @@ supports:
   - "local-transport-areas"
 ---
 
-## Problem
+### Problem
 
 Shops rarely place themselves in those positions which best serve the people's needs, and also guarantee their own stability.
 
-## Solution
+### Solution
 
 When you locate any individual shop, follow a three-step procedure:
 

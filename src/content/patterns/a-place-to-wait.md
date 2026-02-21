@@ -19,10 +19,10 @@ supports:
   - "small-services-without-red-tape"
 ---
 
-## Problem
+### Problem
 
 The process of waiting has inherent conflicts in it.
 
-## Solution
+### Solution
 
 In places where people end up waiting (for a bus, for an appointment, for a plane), create a situation which makes the waiting positive. Fuse the waiting with some other activity—newspaper, coffee, pool tables, horseshoes; something which draws people in who are not simply waiting. And also the opposite: make a place which can draw a person waiting into a reverie; quiet; a positive silence.

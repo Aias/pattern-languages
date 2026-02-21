@@ -20,11 +20,11 @@ supports:
   - "building-complex"
 ---
 
-## Problem
+### Problem
 
 Large parking structures full of cars are inhuman and dead buildings—no one wants to see them or walk by them. At the same time, if you are driving, the entrance to a parking structure is essentially the main entrance to the building, and it needs to be visible.
 
-## Solution
+### Solution
 
 Put all large parking lots, or parking garages, behind some kind of natural wall, so that the cars and parking structures cannot be seen from outside. The wall which surrounds the cars may be a building, connected houses, or housing hills, earth berms, or shops.
 

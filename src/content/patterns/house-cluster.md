@@ -22,10 +22,10 @@ supports:
   - "degrees-of-publicness"
 ---
 
-## Problem
+### Problem
 
 People will not feel comfortable in their houses unless a group of houses forms a cluster, with the public land between them jointly owned by all the householders.
 
-## Solution
+### Solution
 
 Arrange houses to form very rough, but identifiable clusters of 8 to 12 households around some common land and paths. Arrange the clusters so that anyone can walk through them, without feeling like a trespasser.

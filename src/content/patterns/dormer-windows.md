@@ -20,10 +20,10 @@ supports:
   - "roof-vaults"
 ---
 
-## Problem
+### Problem
 
 We know from our discussion of Sheltering Roof (117) that the top story of the building should be right inside the roof, surrounded by it.
 
-## Solution
+### Solution
 
 Wherever you have windows in the roof, make dormer windows which are high enough to stand in, and frame them like any other alcoves in the building.

@@ -14,10 +14,10 @@ supports:
   - "small-public-squares"
 ---
 
-## Problem
+### Problem
 
 The instinct to climb up to some high place, from which you can look down and survey your world, seems to be a fundamental human instinct.
 
-## Solution
+### Solution
 
 Build occasional high places as landmarks throughout the city. They can be a natural part of the topography, or towers, or part of the roofs of the highest local building—but, in any case, they should include a physical climb.

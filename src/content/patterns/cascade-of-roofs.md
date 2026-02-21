@@ -15,11 +15,11 @@ supports:
   - "wings-of-light"
 ---
 
-## Problem
+### Problem
 
 Few buildings will be structurally and socially intact, unless the floors step down toward the ends of wings, and unless the roof, accordingly, forms a cascade.
 
-## Solution
+### Solution
 
 Visualize the whole building, or building complex, as a system of roofs.
 

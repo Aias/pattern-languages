@@ -12,10 +12,10 @@ supports:
   - "nightlife"
 ---
 
-## Problem
+### Problem
 
 Where can people sing, and drink, and shout, and let go of their sorrows?
 
-## Solution
+### Solution
 
 Somewhere in the community at least one big place where a few hundred people can gather, with beer and wine, music, and perhaps a half-dozen activities, so that people are continually cross-crossing from one to another.

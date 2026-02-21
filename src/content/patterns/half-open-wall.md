@@ -23,10 +23,10 @@ supports:
   - "the-flow-through-rooms"
 ---
 
-## Problem
+### Problem
 
 Rooms which are too closed prevent the natural flow of social occasions, and the natural process of transition from one social moment to another. And rooms which are too open will not support the differentiation of events which social life requires.
 
-## Solution
+### Solution
 
 Adjust the walls, opening, and windows in each indoor space until you reach the right balance between open, flowing space and closed cell-like space. Do not take it for granted that each space is a room; nor, on the other hand, that all spaces must flow into each other. The right balance will always lie between these extremes: no one room entirely enclosed; and no space totally connected to another. Use combinations of columns, half-open walls, porches, indoor windows, sliding doors, low sills, french doors, sitting walls, and so on, to hit the right balance.

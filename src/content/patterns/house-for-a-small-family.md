@@ -13,10 +13,10 @@ supports:
   - "house-cluster"
 ---
 
-## Problem
+### Problem
 
 In a house for a small family, it is the relationship between children and adults which is most critical.
 
-## Solution
+### Solution
 
 Give the house three distinct parts: a realm for parents, a realm for the children, and a common area. Conceive these three realms as roughly similar in size, with the commons the largest.

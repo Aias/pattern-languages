@@ -11,10 +11,10 @@ supports:
   - "the-distribution-of-towns"
 ---
 
-## Problem
+### Problem
 
 Continuous sprawling urbanization destroys life, and makes cities unbearable. But the sheer size of cities is also valuable and potent.
 
-## Solution
+### Solution
 
 Keep interlocking fingers of farmland and urban land, even at the center of the metropolis. The urban fingers should never be more than 1 mile wide, while the farmland fingers should never be less than 1 mile wide.

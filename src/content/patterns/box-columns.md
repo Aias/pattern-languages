@@ -13,10 +13,10 @@ supports:
   - "final-column-distribution"
 ---
 
-## Problem
+### Problem
 
 In all the world's traditional and historic buildings, the columns are expressive, beautiful, and treasured elements. Only in modern buildings have they become ugly and meaningless.
 
-## Solution
+### Solution
 
 Make the columns in the form of filled hollow tubes, with a stiff tubular outer skin, and a solid core that is strong in compression. Give the skin of the column some tensile strength—preferably in the skin itself, but perhaps with reinforcing wires in the fill.

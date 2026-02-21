@@ -16,10 +16,10 @@ supports:
   - "ceiling-height-variety"
 ---
 
-## Problem
+### Problem
 
 The perfectly crystalline squares and rectangles of ultra-modern architecture make no special sense in human or in structural terms. They only express the rigid desires and fantasies which people have when they get too preoccupied with systems and the means of their production.
 
-## Solution
+### Solution
 
 With occasional exceptions, make each indoor space or each position of a space, a rough rectangle, with roughly straight walls, near right angles in the corners, and a roughly symmetrical vault over each room.

@@ -17,11 +17,11 @@ supports:
   - "subculture-boundary"
 ---
 
-## Problem
+### Problem
 
 The random character of local densities confuses the identity of our communities, and also creates a chaos in the pattern of land use.
 
-## Solution
+### Solution
 
 Encourage growth and the accumulation of density to form a clear configuration of peaks and valleys according to the following rules:
 

@@ -16,10 +16,10 @@ supports:
   - "main-entrance"
 ---
 
-## Problem
+### Problem
 
 Unless the spaces in a building are arranged in a sequence which corresponds to their degrees of privateness, the visits made by strangers, friends, guests, clients, family, will always be a little awkward.
 
-## Solution
+### Solution
 
 Lay out the spaces of a building so that they create a sequence which begins with the entrance and the most public parts of the building, then leads into the slightly more private areas, and finally to the most private domains.

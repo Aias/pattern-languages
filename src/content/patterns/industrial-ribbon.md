@@ -13,10 +13,10 @@ supports:
   - "subculture-boundary"
 ---
 
-## Problem
+### Problem
 
 Exaggerated zoning laws separate industry from the rest of urban life completely, and contribute to the plastic unreality of sheltered residential neighborhoods.
 
-## Solution
+### Solution
 
 Place industry in ribbons, between 200 and 500 feet wide, which form the boundaries between communities. Break these ribbons into long blocks, varying in area between 1 and 25 acres; and treat the edge of every ribbon as a place where people from nearby communities can benefit from the offshoots of the industrial activity.

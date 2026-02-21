@@ -19,10 +19,10 @@ supports:
   - "cascade-of-roofs"
 ---
 
-## Problem
+### Problem
 
 No social group—whether a family, a work group, or a school group—can survive without constant informal contact among its members.
 
-## Solution
+### Solution
 
 Create a single common area for every social group. Locate it at the center of gravity of all the spaces the group occupied, and in such a way that the paths which go in and out of the building lie tangent to it.

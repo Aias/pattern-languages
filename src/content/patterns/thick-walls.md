@@ -21,10 +21,10 @@ supports:
   - "building-edge"
 ---
 
-## Problem
+### Problem
 
 Houses with smooth hard walls made of prefabricated panels, concrete, gypsum, steel, aluminum, or glass always stay impersonal and dead.
 
-## Solution
+### Solution
 
 Open your mind to the possibility that the walls of your building can be thick, can occupy a substantial volume—even actual usable space—and need not be merely thin membranes which have no depth. Decide where these thick walls ought to be.
