@@ -4,6 +4,6 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "include": ["src", "astro.config.mjs"],
+  "include": ["src", "astro.config.mjs", "eslint.config.ts"],
   "exclude": ["node_modules", "dist"]
 }
