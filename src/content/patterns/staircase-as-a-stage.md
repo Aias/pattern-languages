@@ -1,0 +1,22 @@
+---
+title: "Staircase as a Stage"
+number: 133
+dependsOn:
+  - "stair-seats"
+  - "zen-view"
+  - "tapestry-of-light-and-dark"
+  - "staircase-volume"
+  - "the-shape-of-indoor-space"
+supports:
+  - "main-entrance"
+  - "the-flow-through-rooms"
+  - "short-passages"
+---
+
+### Problem
+
+A staircase is not just a way of getting from one floor to another. The stair is itself a space, a volume, a part of the building; and unless this space is made to live, it will be a dead spot, and work to disconnect the building and to tear its processes apart.
+
+### Solution
+
+Place the main stair in a key position, central and visible. Treat the whole staircase as a room (or if it is outside, as a courtyard). Arrange it so that the stair and the room are one, with the stair coming down around one or two walls of the room. Flare out the bottom of the stair with open windows or balustrades and with wide steps so that the people coming down the stair become part of the action in the room while they are on the stair, and so that people below will naturally use the stair for seats.

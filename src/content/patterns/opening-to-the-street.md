@@ -1,0 +1,28 @@
+---
+title: "Opening to the Street"
+number: 165
+significance: 1
+dependsOn:
+  - "sitting-wall"
+  - "path-shape"
+  - "outdoor-room"
+supports:
+  - "street-windows"
+  - "university-as-a-marketplace"
+  - "local-town-hall"
+  - "necklace-of-community-projects"
+  - "market-of-many-shops"
+  - "health-center"
+  - "street-cafe"
+  - "building-thoroughfare"
+---
+
+### Problem
+
+The sight of action is an incentive for action. When people can see into spaces from the street their world is enlarged and made richer, there is more understanding; and there is possibility for communication, learning.
+
+### Solution
+
+In any public space which depends for its success on its exposure to the street, open it up, with a fully opening wall which can be thrown wide open, and if it is possible, include some part of the activity on the far side of the pedestrian path, so that it actually straddles the path, and people walk through it as they walk along the path.
+
+There are dozens of ways to build such an opening. For example, a wall can be made very cheaply with a simply plywood hanging shutter sliding on an overhead rail, which can be removed to open up completely, and locked in place at night.

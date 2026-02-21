@@ -1,0 +1,106 @@
+/* ---------------------------------------- */
+/* CSS Custom Properties (from theme.js) */
+/* ---------------------------------------- */
+
+:root {
+	/* Breakpoints */
+	--media-sm: 800px;
+	--media-md: 1000px;
+	--media-lg: 1600px;
+
+	/* Fonts */
+	--font-system: system-ui, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto',
+		'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+	--font-sans: system-ui, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto',
+		'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+	--font-serif: 'Palatino Linotype', Palatino, Palladio, 'URW Palladio L', 'Book Antiqua',
+		Baskerville, 'Bookman Old Style', 'Bitstream Charter', 'Nimbus Roman No9 L', Garamond,
+		'Apple Garamond', 'ITC Garamond Narrow', 'New Century Schoolbook', 'Century Schoolbook',
+		'Century Schoolbook L', Georgia, serif;
+	--font-mono: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+		'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
+		'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+
+	/* Typography */
+	--line-height: 1.7;
+
+	/* Colors */
+	--color-bg: #f5e9d8;
+	--color-text-primary: rgba(0, 0, 0, 0.92);
+	--color-text-secondary: rgba(0, 0, 0, 0.61);
+	--color-shadow: rgba(0, 0, 0, 0.33);
+	--color-border: rgba(0, 0, 0, 0.2);
+	--color-faint: rgba(0, 0, 0, 0.08);
+}
+
+/* ---------------------------------------- */
+/* Global Styles (from site.js) */
+/* ---------------------------------------- */
+
+html {
+	line-height: var(--line-height);
+	background-color: var(--color-bg);
+	color: var(--color-text-primary);
+}
+
+body {
+	font-family: var(--font-serif);
+	margin: 2rem 4rem;
+}
+
+@media (max-width: 800px) {
+	body {
+		margin: 1rem 2rem;
+	}
+}
+
+h1 {
+	line-height: 1.4;
+}
+
+h2 {
+	line-height: 1.5;
+}
+
+a {
+	color: currentColor;
+	font-family: var(--font-mono);
+	font-size: 0.9em;
+	transition: all 0.2s;
+	position: relative;
+	cursor: pointer;
+}
+
+a::before {
+	position: absolute;
+	pointer-events: none;
+	z-index: -1;
+	display: block;
+	content: '';
+	inset: -0.4em;
+	opacity: 0;
+	background-color: var(--color-text-primary);
+	transition: all 0.2s;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: white;
+}
+
+a:hover::before,
+a:active::before,
+a:focus::before {
+	opacity: 1;
+}
+
+blockquote {
+	font-size: 1.1em;
+	font-style: italic;
+	margin-left: 1.5em;
+}
+
+svg {
+	fill: currentColor;
+}
