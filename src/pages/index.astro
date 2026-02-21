@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
-import AnchorLink from "../components/anchorLink";
 
 const title = "A Pattern Language";
 const description =
@@ -75,9 +74,7 @@ const slugToTitle = new Map(
                     </li>
                     {supports.map((ref) => (
                       <li>
-                        <AnchorLink client:visible to={ref.slug}>
-                          {ref.title}
-                        </AnchorLink>
+                        <a href={`#${ref.slug}`}>{ref.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -92,9 +89,7 @@ const slugToTitle = new Map(
                     </li>
                     {dependsOn.map((ref) => (
                       <li>
-                        <AnchorLink client:visible to={ref.slug}>
-                          {ref.title}
-                        </AnchorLink>
+                        <a href={`#${ref.slug}`}>{ref.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -111,9 +106,7 @@ const slugToTitle = new Map(
         {
           patterns.map((pattern) => (
             <li>
-              <AnchorLink client:visible to={pattern.slug}>
-                {pattern.data.title}
-              </AnchorLink>
+              <a href={`#${pattern.slug}`}>{pattern.data.title}</a>
             </li>
           ))
         }
@@ -121,6 +114,128 @@ const slugToTitle = new Map(
     </nav>
   </div>
 </Base>
+
+<script>
+  (() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    if (window.CSS?.supports?.("selector(:target-current)")) {
+      return;
+    }
+
+    const nav = document.querySelector(".pattern-nav");
+    if (!(nav instanceof HTMLElement)) {
+      return;
+    }
+
+    const links = Array.from(
+      nav.querySelectorAll<HTMLAnchorElement>('a[href^="#"]'),
+    );
+
+    if (links.length === 0) {
+      return;
+    }
+
+    type NavTarget = {
+      id: string;
+      link: HTMLAnchorElement;
+      target: HTMLElement;
+    };
+
+    const targets: NavTarget[] = links.flatMap((link) => {
+        const href = link.getAttribute("href");
+        if (!href) {
+          return [];
+        }
+        const id = decodeURIComponent(href.slice(1));
+        if (!id) {
+          return [];
+        }
+        const target = document.getElementById(id);
+        if (!target) {
+          return [];
+        }
+        return [{ id, link, target }];
+      });
+
+    if (targets.length === 0) {
+      return;
+    }
+
+    const inBand = new Set();
+    const orderedIds = targets.map((item) => item.id);
+    const linkById = new Map(targets.map((item) => [item.id, item.link]));
+    const targetById = new Map(targets.map((item) => [item.id, item.target]));
+
+    const setCurrent = (id: string) => {
+      links.forEach((link) => {
+        if (link.getAttribute("href") === `#${id}`) {
+          link.setAttribute("aria-current", "location");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    };
+
+    const resolveCurrentFromScroll = () => {
+      const focusLine = window.innerHeight * 0.35;
+      let currentId = orderedIds[0];
+
+      orderedIds.forEach((id) => {
+        const target = targetById.get(id);
+        if (!target) {
+          return;
+        }
+        if (target.getBoundingClientRect().top <= focusLine) {
+          currentId = id;
+        }
+      });
+
+      return currentId;
+    };
+
+    const syncCurrent = () => {
+      const visibleId = orderedIds.find((id) => inBand.has(id));
+      setCurrent(visibleId ?? resolveCurrentFromScroll());
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          if (entry.isIntersecting) {
+            inBand.add(id);
+          } else {
+            inBand.delete(id);
+          }
+        });
+        syncCurrent();
+      },
+      {
+        rootMargin: "-35% 0px -55% 0px",
+        threshold: 0,
+      },
+    );
+
+    targets.forEach(({ target }) => {
+      observer.observe(target);
+    });
+
+    const syncFromHash = () => {
+      const hash = decodeURIComponent(window.location.hash.slice(1));
+      if (hash && linkById.has(hash)) {
+        setCurrent(hash);
+        return;
+      }
+      syncCurrent();
+    };
+
+    window.addEventListener("hashchange", syncFromHash, { passive: true });
+    syncFromHash();
+  })();
+</script>
 
 <style>
   .patterns-layout {
@@ -192,6 +307,28 @@ const slugToTitle = new Map(
 
   .pattern-nav a {
     display: inline-block;
+  }
+
+  .pattern-nav a[aria-current="location"] {
+    color: white;
+  }
+
+  .pattern-nav a[aria-current="location"]::before {
+    opacity: 1;
+  }
+
+  @supports selector(:target-current) {
+    .pattern-nav ol {
+      scroll-target-group: auto;
+    }
+
+    .pattern-nav a:target-current {
+      color: white;
+    }
+
+    .pattern-nav a:target-current::before {
+      opacity: 1;
+    }
   }
 
   .pattern-wrapper .pattern-header {
