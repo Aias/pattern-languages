@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark';
 import { defineConfig } from 'astro/config';
 import { basename } from 'node:path';
 
@@ -63,7 +64,7 @@ const prefixMarkdownHeadingIds = () => {
 export default defineConfig({
 	output: 'static',
 	markdown: {
-		remarkPlugins: [prefixMarkdownHeadingIds],
+		processor: unified({ remarkPlugins: [prefixMarkdownHeadingIds] }),
 	},
 	site: 'https://patternlanguages.netlify.com',
 });

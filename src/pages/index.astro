@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Base from "../layouts/Base.astro";
 
 const title = "A Pattern Language";
@@ -15,10 +15,8 @@ const patterns = patternsRaw.sort((a, b) => {
   return left - right;
 });
 
-// Build slug -> title map for resolving references
-const slugToTitle = new Map(
-  patterns.map((p) => [p.slug, p.data.title] as const),
-);
+// Build id -> title map for resolving references
+const titleById = new Map(patterns.map((p) => [p.id, p.data.title] as const));
 ---
 
 <Base title={title} description={description}>
@@ -37,18 +35,18 @@ const slugToTitle = new Map(
     <ol class="pattern-list">
       {
         patterns.map(async (pattern) => {
-          const { Content } = await pattern.render();
-          const supports = pattern.data.supports.flatMap((slug) => {
-            const title = slugToTitle.get(slug);
-            return title ? [{ slug, title }] : [];
+          const { Content } = await render(pattern);
+          const supports = pattern.data.supports.flatMap((id) => {
+            const title = titleById.get(id);
+            return title ? [{ id, title }] : [];
           });
-          const dependsOn = pattern.data.dependsOn.flatMap((slug) => {
-            const title = slugToTitle.get(slug);
-            return title ? [{ slug, title }] : [];
+          const dependsOn = pattern.data.dependsOn.flatMap((id) => {
+            const title = titleById.get(id);
+            return title ? [{ id, title }] : [];
           });
 
           return (
-            <li id={pattern.slug}>
+            <li id={pattern.id}>
               <section class="pattern-wrapper">
                 <h2 class="pattern-header">
                   <span class="pattern-name">{pattern.data.title}</span>
@@ -74,7 +72,7 @@ const slugToTitle = new Map(
                     </li>
                     {supports.map((ref) => (
                       <li>
-                        <a href={`#${ref.slug}`}>{ref.title}</a>
+                        <a href={`#${ref.id}`}>{ref.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -89,7 +87,7 @@ const slugToTitle = new Map(
                     </li>
                     {dependsOn.map((ref) => (
                       <li>
-                        <a href={`#${ref.slug}`}>{ref.title}</a>
+                        <a href={`#${ref.id}`}>{ref.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -106,7 +104,7 @@ const slugToTitle = new Map(
         {
           patterns.map((pattern) => (
             <li>
-              <a href={`#${pattern.slug}`}>{pattern.data.title}</a>
+              <a href={`#${pattern.id}`}>{pattern.data.title}</a>
             </li>
           ))
         }
@@ -145,20 +143,20 @@ const slugToTitle = new Map(
     };
 
     const targets: NavTarget[] = links.flatMap((link) => {
-        const href = link.getAttribute("href");
-        if (!href) {
-          return [];
-        }
-        const id = decodeURIComponent(href.slice(1));
-        if (!id) {
-          return [];
-        }
-        const target = document.getElementById(id);
-        if (!target) {
-          return [];
-        }
-        return [{ id, link, target }];
-      });
+      const href = link.getAttribute("href");
+      if (!href) {
+        return [];
+      }
+      const id = decodeURIComponent(href.slice(1));
+      if (!id) {
+        return [];
+      }
+      const target = document.getElementById(id);
+      if (!target) {
+        return [];
+      }
+      return [{ id, link, target }];
+    });
 
     if (targets.length === 0) {
       return;
