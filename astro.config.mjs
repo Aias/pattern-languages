@@ -65,6 +65,7 @@ const prefixMarkdownHeadingIds = () => {
 export default defineConfig({
 	output: 'static',
 	adapter: cloudflare(),
+	session: false,
 	env: {
 		schema: {
 			TYPESAFE_API_KEY: envField.string({ context: 'server', access: 'secret' }),
