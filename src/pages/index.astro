@@ -3,8 +3,8 @@ import { getCollection, render } from "astro:content";
 import Base from "../layouts/Base.astro";
 
 const title = "A Pattern Language";
-const description =
-  "Which generates a human society and the structures to support it.";
+const subject = "human society";
+const description = `Which generates a ${subject} and the structures to support it.`;
 
 const patternsRaw = await getCollection("patterns");
 
@@ -23,97 +23,198 @@ const titleById = new Map(patterns.map((p) => [p.id, p.data.title] as const));
   <div class="patterns-layout">
     <div class="site-header">
       <h1>{title}</h1>
-      {
-        description && (
-          <p>
-            <em>{description}</em>
-          </p>
-        )
-      }
+      <form class="pattern-search" role="search">
+        <p>
+          <em>
+            Which generates a{" "}
+            <input
+              type="search"
+              name="q"
+              placeholder={subject}
+              aria-label="What are you designing?"
+              autocomplete="off"
+              size={subject.length}
+            />{" "}
+            and the structures to support it.
+          </em>
+        </p>
+      </form>
     </div>
 
     <ol class="pattern-list">
-      {
-        patterns.map(async (pattern) => {
-          const { Content } = await render(pattern);
-          const supports = pattern.data.supports.flatMap((id) => {
-            const title = titleById.get(id);
-            return title ? [{ id, title }] : [];
-          });
-          const dependsOn = pattern.data.dependsOn.flatMap((id) => {
-            const title = titleById.get(id);
-            return title ? [{ id, title }] : [];
-          });
+      {patterns.map(async (pattern) => {
+        const { Content } = await render(pattern);
+        const supports = pattern.data.supports.flatMap((id) => {
+          const title = titleById.get(id);
+          return title ? [{ id, title }] : [];
+        });
+        const dependsOn = pattern.data.dependsOn.flatMap((id) => {
+          const title = titleById.get(id);
+          return title ? [{ id, title }] : [];
+        });
 
-          return (
-            <li id={pattern.id}>
-              <section class="pattern-wrapper">
-                <h2 class="pattern-header">
-                  <span class="pattern-name">{pattern.data.title}</span>
-                  <span class="pattern-significance">
-                    {Array.from({ length: pattern.data.significance }).map(
-                      () => (
-                        <svg
-                          viewBox="0 0 200 200"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                        >
-                          <path d="M100 157.7L161.8 195L145.4 124.7L200 77.4L128.1 71.3L100 5L71.9 71.3L0 77.4L54.6 124.7L38.2 195L100 157.7Z" />
-                        </svg>
-                      ),
-                    )}
-                  </span>
-                </h2>
+        return (
+          <li id={pattern.id}>
+            <section class="pattern-wrapper">
+              <h2 class="pattern-header">
+                <span class="pattern-name">
+                  {pattern.data.number !== undefined && (
+                    <span class="pattern-number">#{pattern.data.number}. </span>
+                  )}
+                  {pattern.data.title}
+                </span>
+                <span class="pattern-significance">
+                  {Array.from({ length: pattern.data.significance }).map(() => (
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path d="M100 157.7L161.8 195L145.4 124.7L200 77.4L128.1 71.3L100 5L71.9 71.3L0 77.4L54.6 124.7L38.2 195L100 157.7Z" />
+                    </svg>
+                  ))}
+                </span>
+              </h2>
 
-                {supports.length > 0 && (
-                  <ul class="link-list">
+              {supports.length > 0 && (
+                <ul class="link-list">
+                  <li>
+                    <em>Supports:</em>
+                  </li>
+                  {supports.map((ref) => (
                     <li>
-                      <em>Supports:</em>
+                      <a href={`#${ref.id}`}>{ref.title}</a>
                     </li>
-                    {supports.map((ref) => (
-                      <li>
-                        <a href={`#${ref.id}`}>{ref.title}</a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  ))}
+                </ul>
+              )}
 
-                <Content />
+              <Content />
 
-                {dependsOn.length > 0 && (
-                  <ul class="link-list">
+              {dependsOn.length > 0 && (
+                <ul class="link-list">
+                  <li>
+                    <em>Depends on:</em>
+                  </li>
+                  {dependsOn.map((ref) => (
                     <li>
-                      <em>Depends on:</em>
+                      <a href={`#${ref.id}`}>{ref.title}</a>
                     </li>
-                    {dependsOn.map((ref) => (
-                      <li>
-                        <a href={`#${ref.id}`}>{ref.title}</a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </section>
-            </li>
-          );
-        })
-      }
+                  ))}
+                </ul>
+              )}
+            </section>
+          </li>
+        );
+      })}
     </ol>
 
     <nav class="pattern-nav">
       <ol>
-        {
-          patterns.map((pattern) => (
-            <li>
-              <a href={`#${pattern.id}`}>{pattern.data.title}</a>
-            </li>
-          ))
-        }
+        {patterns.map((pattern) => (
+          <li>
+            <span class="nav-number">{pattern.data.number}</span>
+            <a href={`#${pattern.id}`}>{pattern.data.title}</a>
+          </li>
+        ))}
       </ol>
     </nav>
   </div>
 </Base>
 
 <script>
+  import type { SearchResponse } from "../lib/pattern-search";
+
+  (() => {
+    const form = document.querySelector(".pattern-search");
+    const input = form?.querySelector("input[type=search]");
+    if (
+      !(form instanceof HTMLFormElement) ||
+      !(input instanceof HTMLInputElement)
+    ) {
+      return;
+    }
+
+    const items = Array.from(
+      document.querySelectorAll<HTMLLIElement>(".pattern-list > li[id]"),
+    );
+    const navItems = Array.from(
+      document.querySelectorAll<HTMLLIElement>(".pattern-nav li"),
+    ).flatMap((item) => {
+      const href = item.querySelector("a")?.getAttribute("href");
+      return href?.startsWith("#") ? [{ item, id: href.slice(1) }] : [];
+    });
+    const patternLinks = Array.from(
+      document.querySelectorAll<HTMLAnchorElement>('.link-list a[href^="#"]'),
+    ).map((link) => ({ link, id: link.getAttribute("href")?.slice(1) ?? "" }));
+
+    const setLinkDisabled = (link: HTMLAnchorElement, disabled: boolean) => {
+      if (disabled) {
+        link.setAttribute("aria-disabled", "true");
+        link.setAttribute("tabindex", "-1");
+      } else {
+        link.removeAttribute("aria-disabled");
+        link.removeAttribute("tabindex");
+      }
+    };
+
+    const DEBOUNCE_MS = 400;
+    let controller: AbortController | undefined;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+
+    const showAll = () => {
+      items.forEach((item) => (item.hidden = false));
+      navItems.forEach(({ item }) => (item.hidden = false));
+      patternLinks.forEach(({ link }) => setLinkDisabled(link, false));
+    };
+
+    const showMatches = (ids: Set<string>) => {
+      items.forEach((item) => (item.hidden = !ids.has(item.id)));
+      navItems.forEach(({ item, id }) => (item.hidden = !ids.has(id)));
+      patternLinks.forEach(({ link, id }) =>
+        setLinkDisabled(link, !ids.has(id)),
+      );
+    };
+
+    const search = async () => {
+      controller?.abort();
+      const query = input.value.trim();
+      if (query === "") {
+        showAll();
+        return;
+      }
+      controller = new AbortController();
+      const { signal } = controller;
+      try {
+        const response = await fetch(
+          `/api/search?q=${encodeURIComponent(query)}`,
+          { signal },
+        );
+        if (!response.ok) {
+          throw new Error(`Search failed with status ${response.status}`);
+        }
+        const result: SearchResponse = await response.json();
+        showMatches(new Set(result.matches.map((match) => match.id)));
+      } catch (error) {
+        if (signal.aborted) {
+          return;
+        }
+        console.error(error);
+      }
+    };
+
+    input.addEventListener("input", () => {
+      clearTimeout(timer);
+      timer = setTimeout(search, DEBOUNCE_MS);
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      clearTimeout(timer);
+      void search();
+    });
+  })();
+
   (() => {
     if (typeof window === "undefined") {
       return;
@@ -254,26 +355,59 @@ const titleById = new Map(patterns.map((p) => [p.id, p.data.title] as const));
     margin-top: 2em;
   }
 
+  .pattern-search input {
+    appearance: none;
+    font: inherit;
+    color: var(--color-accent);
+    background: none;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    min-width: 1ch;
+    field-sizing: content;
+    text-decoration-style: double;
+    text-decoration-thickness: 0.75px;
+    text-underline-offset: 2px;
+  }
+
+  .pattern-search input::placeholder {
+    color: inherit;
+    opacity: 1;
+    transition: opacity 150ms ease-out;
+  }
+
+  .pattern-search input:focus::placeholder {
+    opacity: 0.5;
+  }
+
+  .pattern-search input::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  .pattern-search input:focus {
+    outline: none;
+  }
+
   .pattern-list {
     grid-area: main;
     list-style: none;
-    counter-reset: pattern-counter;
     margin-top: 0;
+    padding-bottom: 6rem;
   }
 
   .pattern-list > li {
-    counter-increment: pattern-counter;
     max-width: 100%;
     overflow-x: auto;
-    margin: 0;
+    margin: 0 -0.5em;
+    padding-inline: 0.5em;
   }
 
   .pattern-list > li:first-child {
     margin-top: 0;
   }
 
-  .pattern-list .pattern-name::before {
-    content: "#" counter(pattern-counter) ". ";
+  .pattern-number {
     white-space: nowrap;
   }
 
@@ -288,8 +422,11 @@ const titleById = new Map(patterns.map((p) => [p.id, p.data.title] as const));
   }
 
   .pattern-nav ol {
-    margin: 4rem 0 2rem;
-    padding: 0 1rem 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.6em 0.75em;
+    margin: 3.5rem 0 2rem;
+    padding: 0.5rem 1rem 2rem;
     max-height: calc(100vh - 4rem);
     position: sticky;
     top: 2rem;
@@ -298,9 +435,24 @@ const titleById = new Map(patterns.map((p) => [p.id, p.data.title] as const));
   }
 
   .pattern-nav li {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    align-items: baseline;
     font-size: 0.8em;
     line-height: 1.5;
-    margin: 0.75em 0;
+    margin: 0;
+  }
+
+  .pattern-nav li[hidden] {
+    display: none;
+  }
+
+  .nav-number {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    text-align: right;
+    color: var(--color-text-secondary);
   }
 
   .pattern-nav a {
@@ -359,6 +511,11 @@ const titleById = new Map(patterns.map((p) => [p.id, p.data.title] as const));
     padding: 0;
     display: inline-flex;
     flex-flow: row wrap;
+  }
+
+  .link-list a[aria-disabled="true"] {
+    opacity: 0.5;
+    pointer-events: none;
   }
 
   .link-list > li {

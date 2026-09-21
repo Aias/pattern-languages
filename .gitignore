@@ -77,3 +77,4 @@ yarn-error.log
 
 # Wrangler
 .wrangler
+.dev.vars*

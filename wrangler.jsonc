@@ -1,7 +1,12 @@
 {
 	"name": "pattern-languages",
+	"main": "@astrojs/cloudflare/entrypoints/server",
 	"compatibility_date": "2026-02-21",
 	"assets": {
-		"directory": "./dist"
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"secrets": {
+		"required": ["TYPESAFE_API_KEY"]
 	}
 }
