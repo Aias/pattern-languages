@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import Base from "../layouts/Base.astro";
+import "../styles/scroll-fade.css";
 
 const title = "A Pattern Language";
 const subject = "human society";
@@ -110,7 +111,7 @@ const titleById = new Map(patterns.map((p) => [p.id, p.data.title] as const));
     </ol>
 
     <nav class="pattern-nav">
-      <ol>
+      <ol class="scroll-fade no-scrollbar">
         {patterns.map((pattern) => (
           <li>
             <span class="nav-number">{pattern.data.number}</span>
