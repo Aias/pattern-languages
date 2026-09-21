@@ -1,15 +1,13 @@
-import { noul, TypeSafeClient } from "@typesafe-ai/sdk";
+import { score, TypeSafeClient } from "@typesafe-ai/sdk";
 import { getCollection } from "astro:content";
 import { TYPESAFE_API_KEY } from "astro:env/server";
 
-const MATCH_FLOOR = 0.5;
-const MATCH_WINDOW = 0.15;
-const MIN_MATCHES = 3;
+const MATCH_PROBABILITY = 0.5;
 const PATTERNS_PER_REQUEST = 64;
 
 export interface PatternMatch {
   id: string;
-  probability: number;
+  score: number;
 }
 
 export interface SearchResponse {
@@ -34,36 +32,36 @@ export const searchPatterns = async (
 
   const batches = chunk(patterns, PATTERNS_PER_REQUEST).map(async (batch) => {
     const result = await client.systemOne({
-      state: { query, patterns: batch },
+      state: { query },
       questions: Object.fromEntries(
-        batch.map((pattern, index) => [
+        batch.map((pattern) => [
           pattern.id,
-          noul(
-            `Would the design pattern at \`patterns[${index}]\` (titled "${pattern.title}") be applied, literally or by analogy, while designing, producing, or constructing the thing named in \`query\`?`,
+          score(
             {
-              true: "Someone designing or building the thing in the query would draw on this pattern's solution, either directly or by translating its underlying principle to the query's own scale, medium, or materials.",
-              false:
-                "Neither the pattern's solution nor its underlying principle would inform how the thing in the query is designed or built.",
+              pattern,
+              question: `How much practical guidance does the design pattern at \`pattern\` (titled "${pattern.title}") provide for designing or building the thing named in \`query\`, directly or by analogy?`,
             },
+            [
+              "The pattern provides no applicable guidance for designing or building the thing in the query.",
+              "The pattern shares a theme with the thing in the query but does not guide a concrete design decision.",
+              "The pattern's solution guides a concrete supporting detail in designing or building the thing in the query, directly or by analogy.",
+              "The pattern's solution guides a central design decision for the thing in the query, directly or by analogy.",
+            ],
           ),
         ]),
       ),
     });
-    return batch.map((pattern) => ({
-      id: pattern.id,
-      probability: result.answers[pattern.id]?.noul ?? 0,
-    }));
+    return batch.flatMap((pattern) => {
+      const answer = result.answers[pattern.id];
+      if (!answer) {
+        throw new Error(`Missing pattern score: ${pattern.id}`);
+      }
+      const probability = answer.probabilities[2] + answer.probabilities[3];
+      return probability >= MATCH_PROBABILITY
+        ? [{ id: pattern.id, score: answer.score }]
+        : [];
+    });
   });
 
-  const ranked = (await Promise.all(batches))
-    .flat()
-    .sort((a, b) => b.probability - a.probability);
-  const cutoff = Math.max(
-    MATCH_FLOOR,
-    (ranked[0]?.probability ?? 0) - MATCH_WINDOW,
-  );
-  const aboveCutoff = ranked.filter(
-    (match) => match.probability >= cutoff,
-  ).length;
-  return ranked.slice(0, Math.max(aboveCutoff, MIN_MATCHES));
+  return (await Promise.all(batches)).flat().sort((a, b) => b.score - a.score);
 };
