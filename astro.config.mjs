@@ -1,5 +1,6 @@
+import cloudflare from '@astrojs/cloudflare';
 import { unified } from '@astrojs/markdown-remark';
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 import { basename } from 'node:path';
 
 const collectText = (node) => {
@@ -63,6 +64,13 @@ const prefixMarkdownHeadingIds = () => {
 
 export default defineConfig({
 	output: 'static',
+	adapter: cloudflare(),
+	session: false,
+	env: {
+		schema: {
+			TYPESAFE_API_KEY: envField.string({ context: 'server', access: 'secret' }),
+		},
+	},
 	markdown: {
 		processor: unified({ remarkPlugins: [prefixMarkdownHeadingIds] }),
 	},
