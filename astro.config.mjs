@@ -74,5 +74,5 @@ export default defineConfig({
 	markdown: {
 		processor: unified({ remarkPlugins: [prefixMarkdownHeadingIds] }),
 	},
-	site: 'https://patternlanguages.netlify.com',
+	site: 'https://patternsof.design',
 });
